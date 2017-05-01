@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+{% block title %}
+	Maqr6 | Forget about the cleaning, enjoy the result!
+{% endblock %}
+{% block extra_head %}
+	{{ form.media }}
+{% endblock %}
+{% block content %}
+    <form id="bookFrom" class="form-horizontal" method="post" action="">
+    	{% csrf_token %}
+		<div class="row">
+			{{ form.non_field_errors }}
+			<h3 class="text-center">Tell us about yourself</h3>
+			<div class="container">
+				<div class="form-group">
+					<div class="col-md-6 col-sm-12">
+						{{ form.firstName.errors }}
+						{% render_field form.firstName placeholder="First name" class="form-control" %}
+						
+					</div>
+					<div class="col-md-6 col-sm-12">
+						{{ form.lastName.errors }}
+						{% render_field form.lastName placeholder="Last name" class="form-control" %}
+					</div>
+					<div class="col-md-6 col-sm-12">
+						{{ form.email.errors }}
+						{% render_field form.email placeholder="Email" class="form-control" %}
+					</div>
+					<div class="col-md-6 col-sm-12">
+						{{ form.phone.errors }}
+						{% render_field form.phone placeholder="Mobile Phone" class="form-control" %}
+					</div>
+				</div>
+			</div>
+		</div>
+			<hr>
+			
+			<div class="row">
+				<h3 class="text-center">Service Area</h3>
+				<div class="container">
+					<div class="form-group">
+						<div class="col-md-6 col-sm-12">
+							{{ form.address.errors }}
+							<p class="text-muted">{{ form.address.help_text }}</p>
+							{% render_field form.address placeholder="Address" class="form-control" %}
+						</div>
+						<div class="col-md-6 col-sm-12">
+							<p class="text-muted">{{ form.city.help_text }}</p>
+							{% render_field form.city class='form-control' readonly='readonly' %}
+						</div>
+					</div>
+			</div>
+			<hr>
+			
+		<div class="row">
+			<h3 class="text-center">Tell us about your home</h3>
+			<div class="container">
+				<div class="form-group {% if form.bedroomNumber.errors or form.bathroomNumber.errors %}has-error{% endif %}">
+					<div class="col-md-6 col-sm-12 text-center">
+						{% for error in form.bedroomNumber.errors %}
+							<label class="control-label" for="id_bedroomNumber">
+								Please choose the number of bedrooms
+							</label>
+						{% endfor %}
+						{% render_field  form.bedroomNumber class="form-control" %}
+					</div>
+					<div class="col-md-6 col-sm-12 text-center">
+						{% for error in form.bathroomNumber.errors %}
+							<label class="control-label" for="id_bathroomNumber">
+								Please choose the number of bathrooms
+							</label>
+						{% endfor %}
+						{% render_field  form.bathroomNumber class="form-control" %}
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<h3 class="text-center"> Extras</h3>
+			<div class="text-center">
+				{{ form.extras.errors }}
+				{% render_field form.extras %}
+				
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<h3 class="text-center"> When do you want us to come?</h3>
+			<div class="container">
+				<div class="form-group {% if form.dateOfService.errors %}has-error{% endif %}">
+					<div class="col-md-4 col-md-offset-4 col-sm-12">
+						{% for error in form.dateOfService.errors %}
+							<label class="control-label" for="id_dateOfService">
+								{{ error }}
+							</label>
+						{% endfor %}
+						<p class="text-muted">{{ form.dateOfService.help_text }}</p>
+						{% render_field form.dateOfService class="form-control" placeholder="Date/time of service" %}
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<hr>
+	<!--
+		<div class="row">
+			<h3 class="text-center"> How often?</h3>
+			<div class="text-center">
+				{% render_field form.howOften %}
+			</div>
+		</div>
+	-->		
+		<div class="row">
+
+			<h3 class="text-center">You will pay: {% render_field form.cost readonly="readonly" %} AMD</h3>
+		</div>
+		<div class="col-xs-12 text-center">
+			<button type="submit" class="btn-primary"> Book Now</button>
+		</div>
+	</form>
+{% endblock content %}

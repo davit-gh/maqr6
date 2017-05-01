@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+	Maqr6 | Forget about cleaning, enjoy the result!
+{% endblock %}
+
+
+{% block content %}
+    
+      
+    <div class="row">
+    	<h3 class="text-center"> How It Works </h3>
+    	
+
+    	<div class="col-xs-12 col-sm-4">
+      		<p>Book a cleaning on our website</p>
+    	</div>
+    	<div class="col-xs-12 col-sm-4">
+      		<p>Our professional staff will do the work</p>
+    	</div>
+    	<div class="col-xs-12 col-sm-4">
+      		<p>Sit back and enjoy your fresh home.</p>
+    	</div>
+    </div>
+  	<div class="row">
+    	<h3 class="text-center">What Users Say</h3>
+    	{% for review in reviews %}
+	      	<div class="col-xs-12 col-sm-4">
+	        	<img src="{% static 'img/review1.png' %}"/>
+	        	<p class="text-center">
+	        		{{ review.reviewText }}
+	        	</p>
+	        	<p class="text-center">
+	          		<strong> {{ review.author }}
+	            	</strong>
+	            </p>
+	        	<div class="text-center">
+	          		<span class="glyphicon glyphicon-star">
+	          		<span class="glyphicon glyphicon-star">
+	          		<span class="glyphicon glyphicon-star">
+	          		<span class="glyphicon glyphicon-star">
+	          		<span class="glyphicon glyphicon-star">
+	            </div>
+	        </div>
+	    {% endfor %}
+    </div>
+    <div class="row">
+    	<div id="book-now-div" class="col-xs-12 text-center">
+      		<a class="btn-primary" href="{% url 'book' %}"> 
+      			Book Now      
+      		</a>
+    	</div>
+  	</div>
+{% endblock %}
