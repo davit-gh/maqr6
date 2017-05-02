@@ -13,7 +13,7 @@ def index(request):
 		'reviews': reviews,
 		'pageHeader': {
 			'title': 'Maqr6',
-			'strapline': 'Shine like your house will'
+			'strapline': 'Shine like your house will!'
 		}
 	}
 	return render(request, 'main/index.html', context)

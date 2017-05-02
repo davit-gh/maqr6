@@ -1,10 +1,3 @@
-#book-now-div{
-	margin-top: 15px;
-}
-.btn-primary{
-	padding: 10px 15px;
-	margin: 15px 0;
-}
 
 .btn-primary:hover{
 	text-decoration: none;
@@ -52,66 +45,35 @@ h1{
 }
 
 .modify-select .select-side {
-  width: 40px;
   position: absolute;
-  top: 86px;
-  background-color: #F3F9FE;
-  height: 34px;
-  right: 15px;
-  border-radius: 0px 3px 3px 0px;
-  border-right: solid 1px gray;
-  border-top: solid 1px gray;
-  border-bottom: solid 1px gray;
+  top: 93px;
+  right: 27px;
   pointer-events: none;
 }
 
 .modify-select .select-side2 {
-  width: 40px;
   position: absolute;
-  top: 0px;
-  background-color: #F3F9FE;
-  height: 34px;
-  right: 15px;
-  border-radius: 0px 3px 3px 0px;
-  border-right: solid 1px gray;
-  border-top: solid 1px gray;
-  border-bottom: solid 1px gray;
+  top: 27px;
+  right: 25px;
   pointer-events: none;
 }
 
 @media (max-width: 500px) {
   .modify-select .select-side {
   	position: absolute;
-    top: 92px;
+    top: 120px;
   }
 }
 
 @media (max-width: 500px) {
   .modify-select .select-side2 {
   	position: absolute;
-    top: 0px;
+    top: 7px;
   }
 }
 
-.modify-select .select-side:before {
-  border-left: solid 1px lightgrey;
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 100%;
-  width: 1px;
-  /* or 100px */
-}
-.modify-select .select-side i {
-  left: 13px;
-  top: 8px;
-}
-.modify-select .select-side2 i {
-  left: 2px;
-  top: 8px;
-}
-.modify-select .select-side i.blue {
+
+.modify-select .select-side i.blue, .modify-select .select-side2 i.blue {
   color: #4E7AF0;
 }
 
@@ -129,9 +91,53 @@ h1{
 
 .trust{
 	background-color: #f0eddf;
-	padding: 70px 0;
+	padding: 40px 0;
 }
 
 p#hlp-txt{
 	margin: 0 0 2px;
+}
+
+div#header-img{
+  width: auto;
+  height: 500px;
+  background: linear-gradient(0deg,rgba(27, 23, 26, 0.49),rgba(2, 39, 56, 0.3)),url('../img/bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  text-align:center;
+  position:relative;
+}
+
+div#header-img .header-txt{
+  position: absolute;
+    top: 30%;
+    left:0;
+    right:0;
+    bottom:0;
+  color: #fff;
+}
+
+.navbar{
+  margin-bottom: 0 !important;
+}
+
+h1{
+  font-size: 4em !important;
+}
+
+h2{
+  font-size: 3em !important;
+}
+
+.fa{
+  color: #abd4d2;
+}
+
+.trust .row{
+  margin-top: 50px
+}
+
+.book-appointment {
+    padding: 130px 0;
 }
