@@ -5,31 +5,39 @@
 {% endblock %}
 
 {% block content %}
-    <form class="form-horizontal" method="post" action="">
-    	{% csrf_token %}
-		<div class="row">
-			{{ form.non_field_errors }}
-			<div class="col-md-6 col-sm-12">
-				<h3>{{ form.contactReason.help_text|first }}</h3>
-				<h4>{{ form.contactReason.help_text|last }}</h4>
-				{% render_field form.contactReason class="form-control" %}
-				
-			</div>
-			<div class="col-md-6 col-sm-12">
-				<h3>{{ form.email.help_text|first }}</h3>
-				<h4>{{ form.email.help_text|last }}</h4>
-				{% render_field form.email class="form-control" placeholder="Email" %}
-			</div>
-		</div>
-		<div class="row">		
-			<div class="col-md-12">
-				<h3>{{ form.text.help_text|first }}</h3>
-				<h4>{{ form.text.help_text|last }}</h4>
-				{% render_field form.text class="form-control" %}
-			</div>
-		</div>
-		<div class="row text-center">
-			<button class="btn-primary"> Send </button>
-		</div>
-	</form>
+	<div class="container">
+		
+		    <form class="form-horizontal" method="post" action="">
+		    	{% csrf_token %}
+				<div class="row">
+					{{ form.non_field_errors }}
+					<div class="col-md-6 col-sm-12 modify-select">
+						<h3>{{ form.contactReason.help_text|first }}</h3>
+						<p class="text-muted">{{ form.contactReason.help_text|last }}</p>
+						
+							<div class="select-side">
+							    <i class="glyphicon glyphicon-menu-down blue"></i>
+							</div>
+							{% render_field form.contactReason class="form-control" %}
+						
+					</div>
+					<div class="col-md-6 col-sm-12">
+						<h3>{{ form.email.help_text|first }}</h3>
+						<p class="text-muted">{{ form.email.help_text|last }}</p>
+						{% render_field form.email class="form-control" placeholder="Email" %}
+					</div>
+				</div>
+				<div class="row">		
+					<div class="col-md-12">
+						<h3>{{ form.text.help_text|first }}</h3>
+						<p class="text-muted">{{ form.text.help_text|last }}</p>
+						{% render_field form.text class="form-control" %}
+					</div>
+				</div>
+				<div class="row text-center">
+					<button class="btn-primary"> Send </button>
+				</div>
+			</form>
+		
+	</div>
 {% endblock content %}

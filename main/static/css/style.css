@@ -10,8 +10,8 @@
 	text-decoration: none;
 }
 
-.form-control{
-	margin: 15px
+.top20{
+	margin-top: 20px
 }
 
 footer{
@@ -38,4 +38,100 @@ h1{
 #id_cost{
 	width: 70px;
 	border: 1px solid transparent;
+}
+
+
+.modify-select select {
+  border: solid 1px grey;
+  border-radius: 3px;
+  font-size: 16px;
+  color: gray;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.modify-select .select-side {
+  width: 40px;
+  position: absolute;
+  top: 86px;
+  background-color: #F3F9FE;
+  height: 34px;
+  right: 15px;
+  border-radius: 0px 3px 3px 0px;
+  border-right: solid 1px gray;
+  border-top: solid 1px gray;
+  border-bottom: solid 1px gray;
+  pointer-events: none;
+}
+
+.modify-select .select-side2 {
+  width: 40px;
+  position: absolute;
+  top: 0px;
+  background-color: #F3F9FE;
+  height: 34px;
+  right: 15px;
+  border-radius: 0px 3px 3px 0px;
+  border-right: solid 1px gray;
+  border-top: solid 1px gray;
+  border-bottom: solid 1px gray;
+  pointer-events: none;
+}
+
+@media (max-width: 500px) {
+  .modify-select .select-side {
+  	position: absolute;
+    top: 92px;
+  }
+}
+
+@media (max-width: 500px) {
+  .modify-select .select-side2 {
+  	position: absolute;
+    top: 0px;
+  }
+}
+
+.modify-select .select-side:before {
+  border-left: solid 1px lightgrey;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 1px;
+  /* or 100px */
+}
+.modify-select .select-side i {
+  left: 13px;
+  top: 8px;
+}
+.modify-select .select-side2 i {
+  left: 2px;
+  top: 8px;
+}
+.modify-select .select-side i.blue {
+  color: #4E7AF0;
+}
+
+.rating {
+    color: #f6cb19;
+    white-space: nowrap;
+    text-shadow: 1px 1px #999;
+    font-size: 20px
+}
+
+.icon-howitworks{
+	font-size: 30px;
+	color: rgba(102,175,233,.6);
+}
+
+.trust{
+	background-color: #f0eddf;
+	padding: 70px 0;
+}
+
+p#hlp-txt{
+	margin: 0 0 2px;
 }

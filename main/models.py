@@ -6,7 +6,7 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 # Create your models here.
 class Review(models.Model):
 	author = models.CharField(max_length=50)
-	rating = models.IntegerField()
+	rating = models.DecimalField(max_digits=2, decimal_places=1)
 	reviewText = models.TextField()
 	date = models.DateTimeField(default=timezone.now())	
 

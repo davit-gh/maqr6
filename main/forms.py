@@ -5,6 +5,9 @@ class ReviewForm(forms.ModelForm):
 	class Meta:
 		model = Review
 		fields = ['author', 'rating', 'reviewText']
+		help_texts = {
+			'reviewText': 'If you have tried our service please let us know what you think.'
+		}
 
 class OrderForm(forms.ModelForm):
 	
@@ -37,11 +40,12 @@ class OrderForm(forms.ModelForm):
 			'bathroomNumber': forms.Select(choices=BATHROOM_CHOICES, attrs={'onchange': 'addToPrice(this);'}),
 			'extras': forms.CheckboxSelectMultiple(choices=EXTRA_CHOICES, attrs={'onchange': 'addToPriceExtras(this);'}),
 			#'howOften': forms.CheckboxSelectMultiple(choices=HOWOFTEN_CHOICES),
-			'dateOfService': DateTimeWidget(options={'startDate': '+1d'})
+			'dateOfService': DateTimeWidget(options={'startDate': '+1d'}),
+			'phone': forms.TextInput()
 		}
 
 		help_texts = {
-			'address': 'The address where you want to be cleaned.',
+			'address': 'The address of the space to be cleaned.',
 			'city': 'We only provide service in Yerevan at this time.',
 			'dateOfService': 'Please set the date and the time of your cleaning.'
 		}
@@ -78,7 +82,7 @@ class ContactForm(forms.ModelForm):
 			],
 			'email': [
 				'What\'s your email address?',
-				'We need this so we can get back to you. Please double check that it\'s right.'
+				'We need this so we can reply to you. Please make sure that it\'s right.'
 			]
 		}
 

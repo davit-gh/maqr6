@@ -8,7 +8,7 @@ from django.contrib import messages
 from django.urls import reverse
 # Create your views here.
 def index(request):
-	reviews = Review.objects.all()[:3]
+	reviews = Review.objects.all()
 	context = {
 		'reviews': reviews,
 		'pageHeader': {

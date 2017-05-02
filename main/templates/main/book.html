@@ -1,9 +1,15 @@
 {% extends 'base.html' %}
-{% load widget_tweaks %}
+{% load widget_tweaks static %}
 {% block title %}
 	Maqr6 | Forget about the cleaning, enjoy the result!
 {% endblock %}
 {% block extra_head %}
+	<script src="{% static 'js/jquery.maskedinput.min.js' %}"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("#id_phone").mask("999 99-99-99",{placeholder:"xxx xx-xx-xx"});
+		});
+	</script>
 	{{ form.media }}
 {% endblock %}
 {% block content %}
@@ -25,11 +31,11 @@
 					</div>
 					<div class="col-md-6 col-sm-12">
 						{{ form.email.errors }}
-						{% render_field form.email placeholder="Email" class="form-control" %}
+						{% render_field form.email placeholder="Email" class="form-control top20" %}
 					</div>
 					<div class="col-md-6 col-sm-12">
 						{{ form.phone.errors }}
-						{% render_field form.phone placeholder="Mobile Phone" class="form-control" %}
+						{% render_field form.phone placeholder="Phone number" class="form-control top20" %}
 					</div>
 				</div>
 			</div>
@@ -57,20 +63,26 @@
 			<h3 class="text-center">Tell us about your home</h3>
 			<div class="container">
 				<div class="form-group {% if form.bedroomNumber.errors or form.bathroomNumber.errors %}has-error{% endif %}">
-					<div class="col-md-6 col-sm-12 text-center">
+					<div class="col-md-6 col-sm-12 text-center modify-select">
 						{% for error in form.bedroomNumber.errors %}
 							<label class="control-label" for="id_bedroomNumber">
 								Please choose the number of bedrooms
 							</label>
 						{% endfor %}
-						{% render_field  form.bedroomNumber class="form-control" %}
+							<div class="select-side2">
+							    <i class="glyphicon glyphicon-menu-down blue"></i>
+							</div>
+							{% render_field  form.bedroomNumber class="form-control" %}
 					</div>
-					<div class="col-md-6 col-sm-12 text-center">
+					<div class="col-md-6 col-sm-12 text-center modify-select">
 						{% for error in form.bathroomNumber.errors %}
 							<label class="control-label" for="id_bathroomNumber">
 								Please choose the number of bathrooms
 							</label>
 						{% endfor %}
+						<div class="select-side2">
+						    <i class="glyphicon glyphicon-menu-down blue"></i>
+						</div>
 						{% render_field  form.bathroomNumber class="form-control" %}
 					</div>
 				</div>
