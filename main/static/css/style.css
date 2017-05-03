@@ -98,18 +98,29 @@ p#hlp-txt{
 	margin: 0 0 2px;
 }
 
-div#header-img{
+div.header-img{
   width: auto;
   height: 500px;
   background: linear-gradient(0deg,rgba(27, 23, 26, 0.49),rgba(2, 39, 56, 0.3)),url('../img/bg.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
   text-align:center;
   position:relative;
 }
 
-div#header-img .header-txt{
+.subheader{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.contact-page {
+    background-image: url("../img/pattern-blue.jpg");
+    width: auto;
+    height: 500px;
+    text-align:center;
+    position:relative;
+}
+
+div.header-img .header-txt, .contact-page .header-txt{
   position: absolute;
     top: 30%;
     left:0;
@@ -140,4 +151,10 @@ h2{
 
 .book-appointment {
     padding: 130px 0;
+}
+
+.messages{
+  position: absolute;
+  top: 50px;
+  z-index: 2
 }

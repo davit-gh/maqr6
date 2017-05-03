@@ -2,10 +2,9 @@
 from __future__ import unicode_literals
 from forms import ReviewForm, OrderForm, ContactForm
 from models import Review
-from django.shortcuts import render, redirect
-from django.http import HttpResponseRedirect
-from django.contrib import messages
-from django.urls import reverse
+from includes.viewinclude import FormClass
+from django.shortcuts import render
+
 # Create your views here.
 def index(request):
 	reviews = Review.objects.all()
@@ -18,55 +17,53 @@ def index(request):
 	}
 	return render(request, 'main/index.html', context)
 
-def processForm(request, FormClass, message, redirectViewName, tplName, strapline):
-	if request.method == 'POST':
-		sampleForm = FormClass(request.POST)
-		if sampleForm.is_valid():
-			sampleForm.save()
-			messages.success(request, message)
-			return redirect(reverse(redirectViewName))
-	else:
-		sampleForm = FormClass()
-
-	context = {
-		'form': sampleForm,
-		'pageHeader': {
-			'title': 'Maqr6',
-			'strapline': strapline
-		}
-	}
-
-	return render(request, tplName, context)
 
 def rate(request):
-	
-   	return processForm(
-   					request,
-   					ReviewForm,
-   					"Your review has been saved, thank you!",
-   					"index",
-   					"main/rate.html",
-   					'Please take the time to rate our service.'
-   				)
+	form =  FormClass(
+				ReviewForm, 
+				"Maqr6", 
+				'Please take the time to rate our service.'
+			)
+   	return  form.processForm(
+				request,		
+				"Your review has been saved, thank you!",
+				"index",
+				"main/rate.html",
+			)
 	
 
 def book(request):
-	return processForm(
-   					request,
-   					OrderForm,
-   					"Your order has been recorded, thank you!",
-   					"index",
-   					'main/book.html',
-   					'Please provide the details of your booking.'
-   				)
+	form =  FormClass(
+				OrderForm, 
+				"Maqr6", 
+				'Please provide the details of your booking.'
+			)
+	return  form.processForm(
+				request,
+				"Your order has been recorded, thank you!",
+				"index",
+				'main/book.html'
+   			)
 
 
 def contact(request):
-	return processForm(
-   					request,
-   					ContactForm,
-   					"We received your message, we'll get back to you very soon. Thank you!",
-   					"index",
-   					'main/contact.html',
-   					'Please feel free to contact us.'
-   				)
+	form  = FormClass(
+				ContactForm, 
+				'Questions? We are happy to answer!',
+				'There are exactly 4 ways you can reach us.'
+			)
+	contact_methods = {
+		'method1': 'Get fast answers on Facebook: <a href="https://facebook.com">Maqr6</a>',
+		'method2': 'Email us directly at: support@maqr6.am',
+		'method3': 'TEXT us on mobile at: 094 43-34-16'
+	}
+
+	form.addContext(**contact_methods)
+
+	return  form.processForm(
+				request,
+				"We received your message, we'll get back to you very soon. Thank you!",
+				"index",
+				'main/contact.html'
+   			)
+	

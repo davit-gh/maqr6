@@ -3,41 +3,66 @@
 {% block title %}
 	Maqr6 | Contact us - forget about cleaning!
 {% endblock %}
-
+{% block header %}{% endblock %}
 {% block content %}
+
+	<div class="contact-page subheader">
+		<div class="header-txt">
+			<h1>{{ pageHeader.title }}</h1>
+			<h2>{{ pageHeader.strapline }}</h2>
+		</div>
+	</div>
 	<div class="container">
-		
-		    <form class="form-horizontal" method="post" action="">
-		    	{% csrf_token %}
-				<div class="row">
-					{{ form.non_field_errors }}
-					<div class="col-md-6 col-sm-12 modify-select">
-						<h3>{{ form.contactReason.help_text|first }}</h3>
-						<p class="text-muted">{{ form.contactReason.help_text|last }}</p>
-						
-							<div class="select-side">
-							    <i class="glyphicon glyphicon-menu-down blue"></i>
+		<div class="panel-group">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					    <form class="form-horizontal" method="post" action="">
+					    	{% csrf_token %}
+							<div class="row">
+								{{ form.non_field_errors }}
+								<div class="col-md-6 col-sm-12 modify-select">
+									<h3>{{ form.contactReason.help_text|first }}</h3>
+									<p class="text-muted">{{ form.contactReason.help_text|last }}</p>
+									
+										<div class="select-side">
+										    <i class="glyphicon glyphicon-menu-down blue"></i>
+										</div>
+										{% render_field form.contactReason class="form-control" %}
+									
+								</div>
+								<div class="col-md-6 col-sm-12">
+									<h3>{{ form.email.help_text|first }}</h3>
+									<p class="text-muted">{{ form.email.help_text|last }}</p>
+									{% render_field form.email class="form-control" placeholder="Email" %}
+								</div>
 							</div>
-							{% render_field form.contactReason class="form-control" %}
-						
-					</div>
-					<div class="col-md-6 col-sm-12">
-						<h3>{{ form.email.help_text|first }}</h3>
-						<p class="text-muted">{{ form.email.help_text|last }}</p>
-						{% render_field form.email class="form-control" placeholder="Email" %}
-					</div>
+							<div class="row">		
+								<div class="col-md-12">
+									<h3>{{ form.text.help_text|first }}</h3>
+									<p class="text-muted">{{ form.text.help_text|last }}</p>
+									{% render_field form.text class="form-control" %}
+								</div>
+							</div>
+							<div class="row text-center top20">
+								<button class="btn btn-primary"> Send </button>
+							</div>
+						</form>
 				</div>
-				<div class="row">		
-					<div class="col-md-12">
-						<h3>{{ form.text.help_text|first }}</h3>
-						<p class="text-muted">{{ form.text.help_text|last }}</p>
-						{% render_field form.text class="form-control" %}
-					</div>
+			<div class="panel panel-default">
+				<div class="panel-body">
+						<h2><em>{{ method1|safe }}</em></h2>
 				</div>
-				<div class="row text-center">
-					<button class="btn-primary"> Send </button>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-body">
+						<h2>{{ method2 }}</h2>
 				</div>
-			</form>
-		
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-body">
+						<h2>{{ method3 }}</h2>
+				</div>
+			</div>
+		</div>
 	</div>
 {% endblock content %}

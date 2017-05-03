@@ -50,14 +50,16 @@
 		    </div>
     	{% endblock %}
     	{% if messages %}
-    		{% for message in messages %}
-		    	<div class="alert alert-{% if message.tags %}{{ message.tags }}{% endif %} alert-dismissable" role="alert">
-		    		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-		    			<span aria-hidden="true">&times;</span>
-		    		</button>
-		    		{{ message }}
-		    	</div>
-		    {% endfor %}
+    		<div class="container messages">
+	    		{% for message in messages %}
+			    	<div class="alert alert-{% if message.tags %}{{ message.tags }}{% endif %} alert-dismissable" role="alert">
+			    		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			    			<span aria-hidden="true">&times;</span>
+			    		</button>
+			    		{{ message }}
+			    	</div>
+			    {% endfor %}
+			</div>
 		{% endif %}
 	
 
