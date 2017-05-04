@@ -24,11 +24,12 @@ class FormClass(object):
 		f = self.context['form']
 		if request.method == 'POST':
 			sampleForm = f(request.POST)
+#			import pdb;pdb.set_trace()
 			if sampleForm.is_valid():
 				sampleForm.save()
 				messages.success(request, message)
 				return redirect(reverse(redirectViewName))
 		else:
 			sampleForm = f()
-
+		self.addContext(**{'form':sampleForm})
 		return render(request, tplName, self.getContext())

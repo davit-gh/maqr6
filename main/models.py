@@ -17,7 +17,7 @@ class Order(models.Model):
 	firstName = models.CharField(max_length=100)
 	lastName = models.CharField(max_length=100)
 	email = models.EmailField()
-	phone = models.IntegerField()
+	phone = models.CharField(max_length=20)
 	address = models.CharField(max_length=100)
 	city = models.CharField(max_length=50, default="Yerevan")
 	bedroomNumber = models.IntegerField(

@@ -9,12 +9,13 @@ class ReviewForm(forms.ModelForm):
 			'reviewText': 'If you have tried our service please let us know what you think.'
 		}
 
+		
 class OrderForm(forms.ModelForm):
 	
 	class Meta:
 		def make_array(item, num, initial_text):
 			i = 1
-			lst = [(0, initial_text)]
+			lst = [('', initial_text)]
 			while i <= num:
 				lst += [(i, '{} {}'.format(i, item))]
 				i += 1
@@ -40,7 +41,7 @@ class OrderForm(forms.ModelForm):
 			'bathroomNumber': forms.Select(choices=BATHROOM_CHOICES, attrs={'onchange': 'addToPrice(this);'}),
 			'extras': forms.CheckboxSelectMultiple(choices=EXTRA_CHOICES, attrs={'onchange': 'addToPriceExtras(this);'}),
 			#'howOften': forms.CheckboxSelectMultiple(choices=HOWOFTEN_CHOICES),
-			'dateOfService': DateTimeWidget(options={'startDate': '+1d'}),
+			'dateOfService': DateTimeWidget(options={'startDate': '+1d'},attrs={'required': 'required'}),
 			'phone': forms.TextInput()
 		}
 
@@ -49,6 +50,8 @@ class OrderForm(forms.ModelForm):
 			'city': 'We only provide service in Yerevan at this time.',
 			'dateOfService': 'Please set the date and the time of your cleaning.'
 		}
+	
+
 
 class ContactForm(forms.ModelForm):
 	def __init__(self, *args, **kwargs):
