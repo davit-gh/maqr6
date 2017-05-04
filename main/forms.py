@@ -17,6 +17,7 @@ class OrderForm(forms.ModelForm):
 									options={'startDate': '+1d'},
 									attrs={'required': 'required'}
 								),
+						label = 'Date and time',
 						input_formats=['%d/%m/%Y %H:%M'],
 						help_text='Please set the date and the time of your cleaning.'
 					)
@@ -51,7 +52,10 @@ class OrderForm(forms.ModelForm):
 			#'howOften': forms.CheckboxSelectMultiple(choices=HOWOFTEN_CHOICES),
 			'phone': forms.TextInput()
 		}
-
+		labels = {
+			'fullName': 'Your full name',
+			'phone': 'Your mobile'
+		}
 		help_texts = {
 			'address': 'The address of the space to be cleaned.',
 			'city': 'We provide service only in Yerevan at this time.'

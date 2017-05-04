@@ -25,7 +25,7 @@
 							<div class="col-md-6 col-sm-12">
 								{{ form.fullName.errors }}
 								<span class="required"></span>
-								{% with ph=form.fullName.name|capfirst %}
+								{% with ph=form.fullName.label %}
 									{% render_field form.fullName placeholder=ph class="form-control top20" %}
 									
 								{% endwith %}	
@@ -33,7 +33,7 @@
 							<div class="col-md-6 col-sm-12">
 								{{ form.phone.errors }}
 								<span class="required"></span>
-								{% with ph=form.phone.name|capfirst %}
+								{% with ph=form.phone.label|capfirst %}
 									{% render_field form.phone class="form-control top20" placeholder=ph %}
 								{% endwith %}
 								
@@ -58,7 +58,9 @@
 								{{ form.address.errors }}
 								<p class="text-muted">{{ form.address.help_text }}</p>
 								<span class="required loweraddress"></span>
-								{% render_field form.address placeholder="Address" class="form-control" %}
+								{% with ph=form.address.name|capfirst  %}
+									{% render_field form.address placeholder=ph class="form-control" %}
+								{% endwith %}
 								
 							</div>
 							<div class="col-md-6 col-sm-12">
@@ -124,7 +126,9 @@
 							{% endfor %}
 							<p class="text-muted">{{ form.dateOfService.help_text }}</p>
 							<span class="required lowerdate"></span>
-							{% render_field form.dateOfService class="form-control" placeholder="Date/time of service" %}
+							{% with ph=form.dateOfService.label %}
+								{% render_field form.dateOfService class="form-control" placeholder=ph %}
+							{% endwith %}
 							
 						</div>
 						
