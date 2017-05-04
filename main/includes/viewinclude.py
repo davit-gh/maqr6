@@ -21,6 +21,7 @@ class FormClass(object):
 			self.context[k] = v
 
 	def processForm(self, request, message, redirectViewName, tplName):
+		
 		f = self.context['form']
 		if request.method == 'POST':
 			sampleForm = f(request.POST)

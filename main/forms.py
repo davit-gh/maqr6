@@ -12,6 +12,14 @@ class ReviewForm(forms.ModelForm):
 		
 class OrderForm(forms.ModelForm):
 	
+	dateOfService = forms.DateTimeField(
+						widget = DateTimeWidget(
+									options={'startDate': '+1d'},
+									attrs={'required': 'required'}
+								),
+						input_formats=['%d/%m/%Y %H:%M'],
+						help_text='Please set the date and the time of your cleaning.'
+					)
 	class Meta:
 		def make_array(item, num, initial_text):
 			i = 1
@@ -41,14 +49,12 @@ class OrderForm(forms.ModelForm):
 			'bathroomNumber': forms.Select(choices=BATHROOM_CHOICES, attrs={'onchange': 'addToPrice(this);'}),
 			'extras': forms.CheckboxSelectMultiple(choices=EXTRA_CHOICES, attrs={'onchange': 'addToPriceExtras(this);'}),
 			#'howOften': forms.CheckboxSelectMultiple(choices=HOWOFTEN_CHOICES),
-			'dateOfService': DateTimeWidget(options={'startDate': '+1d'},attrs={'required': 'required'}),
 			'phone': forms.TextInput()
 		}
 
 		help_texts = {
 			'address': 'The address of the space to be cleaned.',
-			'city': 'We only provide service in Yerevan at this time.',
-			'dateOfService': 'Please set the date and the time of your cleaning.'
+			'city': 'We provide service only in Yerevan at this time.'
 		}
 	
 
@@ -75,7 +81,7 @@ class ContactForm(forms.ModelForm):
 		}
 
 		help_texts = {
-			'contactReason': [
+			'contacetReason': [
 				'What do you need help with?',
 				'This helps us make sure you get the right answer as fast as possible'
 			],

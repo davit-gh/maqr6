@@ -134,11 +134,11 @@ div.header-img .header-txt, .contact-page .header-txt{
 }
 
 h1{
-  font-size: 4em !important;
+  font-size: 3em !important;
 }
 
 h2{
-  font-size: 3em !important;
+  font-size: 2em !important;
 }
 
 .fa{
@@ -157,4 +157,19 @@ h2{
   position: absolute;
   top: 50px;
   z-index: 2
+}
+
+span.required{
+  position: absolute;
+  top: 5px;
+  color: red;
+}
+
+span.required.lowerdate{ top: 36px; }
+span.required.loweraddress{ top: 18px; }
+span.required:before { content: '*'; }
+
+.transp-bg{
+  background-color: rgba(200, 200, 225, 0.19);
+  padding: 15px;
 }

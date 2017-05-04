@@ -21,23 +21,30 @@
 				<h3 class="text-center">Tell us about yourself</h3>
 				<div class="container">
 					<div class="form-group">
-						<div class="col-md-6 col-sm-12">
-							{{ form.firstName.errors }}
-							{% render_field form.firstName placeholder="First name" class="form-control top20" %}
-							
-						</div>
-						<div class="col-md-6 col-sm-12">
-							{{ form.lastName.errors }}
-							{% render_field form.lastName placeholder="Last name" class="form-control top20" %}
-						</div>
-						<div class="col-md-6 col-sm-12">
-							{{ form.email.errors }}
-							{% render_field form.email placeholder="Email" class="form-control top20" %}
-						</div>
-						<div class="col-md-6 col-sm-12">
-							{{ form.phone.errors }}
-							{% render_field form.phone placeholder="Phone number" class="form-control top20" %}
-						</div>
+						
+							<div class="col-md-6 col-sm-12">
+								{{ form.fullName.errors }}
+								<span class="required"></span>
+								{% with ph=form.fullName.name|capfirst %}
+									{% render_field form.fullName placeholder=ph class="form-control top20" %}
+									
+								{% endwith %}	
+							</div>
+							<div class="col-md-6 col-sm-12">
+								{{ form.phone.errors }}
+								<span class="required"></span>
+								{% with ph=form.phone.name|capfirst %}
+									{% render_field form.phone class="form-control top20" placeholder=ph %}
+								{% endwith %}
+								
+							</div>
+						
+							<div class="col-md-6 col-md-offset-3 col-sm-12">
+								{% with ph=form.email.name|capfirst %}
+									{{ form.email.errors }}
+									{% render_field form.email  class="form-control top20" placeholder=ph %}
+								{% endwith %}
+							</div>	
 					</div>
 				</div>
 			</div>
@@ -50,7 +57,9 @@
 							<div class="col-md-6 col-sm-12">
 								{{ form.address.errors }}
 								<p class="text-muted">{{ form.address.help_text }}</p>
+								<span class="required loweraddress"></span>
 								{% render_field form.address placeholder="Address" class="form-control" %}
+								
 							</div>
 							<div class="col-md-6 col-sm-12">
 								<p class="text-muted">{{ form.city.help_text }}</p>
@@ -64,7 +73,7 @@
 				<h3 class="text-center">Tell us about your home</h3>
 				<div class="container">
 					<div class="form-group {% if form.bedroomNumber.errors or form.bathroomNumber.errors %}has-error{% endif %}">
-						<div class="col-md-6 col-sm-12 text-center modify-select">
+						<div class="col-md-6 col-sm-12 modify-select">
 							{% for error in form.bedroomNumber.errors %}
 								<label class="control-label" for="id_bedroomNumber">
 									Please choose the number of bedrooms
@@ -73,10 +82,11 @@
 								<div class="select-side2">
 								    <i class="glyphicon glyphicon-menu-down blue"></i>
 								</div>
-								
+								<span class="required"></span>
 								{% render_field  form.bedroomNumber class="form-control top20" %}
+								
 						</div>
-						<div class="col-md-6 col-sm-12 text-center modify-select">
+						<div class="col-md-6 col-sm-12 modify-select">
 							{% for error in form.bathroomNumber.errors %}
 								<label class="control-label" for="id_bathroomNumber">
 									Please choose the number of bathrooms
@@ -85,7 +95,9 @@
 							<div class="select-side2">
 							    <i class="glyphicon glyphicon-menu-down blue"></i>
 							</div>
+							<span class="required"></span>
 							{% render_field  form.bathroomNumber class="form-control top20" %}
+							
 						</div>
 					</div>
 				</div>
@@ -111,7 +123,9 @@
 								</label>
 							{% endfor %}
 							<p class="text-muted">{{ form.dateOfService.help_text }}</p>
+							<span class="required lowerdate"></span>
 							{% render_field form.dateOfService class="form-control" placeholder="Date/time of service" %}
+							
 						</div>
 						
 					</div>

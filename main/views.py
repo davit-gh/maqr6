@@ -26,7 +26,7 @@ def rate(request):
 			)
    	return  form.processForm(
 				request,		
-				"Your review has been saved, thank you!",
+				"Your review has been saved, thank you! If this is your first order we'll call you to verify.",
 				"index",
 				"main/rate.html",
 			)
@@ -40,7 +40,7 @@ def book(request):
 			)
 	return  form.processForm(
 				request,
-				"Your order has been recorded, thank you!",
+				"Your order has been recorded, thank you! If this is your first order we'll call you for verification.",
 				"index",
 				'main/book.html'
    			)
