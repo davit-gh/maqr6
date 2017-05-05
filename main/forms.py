@@ -52,7 +52,8 @@ class OrderForm(forms.ModelForm):
 			'bathroomNumber': forms.Select(choices=BATHROOM_CHOICES, attrs={'onchange': 'addToPrice(this);'}),
 			'extras': forms.CheckboxSelectMultiple(choices=EXTRA_CHOICES, attrs={'onchange': 'addToPriceExtras(this);'}),
 			#'howOften': forms.CheckboxSelectMultiple(choices=HOWOFTEN_CHOICES),
-			'phone': PhoneInput()
+			'phone': PhoneInput(),
+			'email': forms.EmailInput(attrs={'onblur': 'verifyEmail(this)'})
 		}
 		labels = {
 			'fullName': 'Your full name',

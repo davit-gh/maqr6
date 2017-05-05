@@ -63,12 +63,19 @@ function validateEmail($email) {
   return emailReg.test( $email );
 }
 
+function verifyEmail(el){
+	if(!validateEmail($(el).val())){
+		$(el).parent().addClass("has-error");
+		if(!$("#email_label").length){
+			$(el).after('<label id="email_label" for="id_email" class="alert alert-danger">Email is not valid</label>');
+		}
+	} else if($(el).parent().hasClass("has-error")){
+		$(el).parent().removeClass("has-error");
+		$("#email_label").remove();
+	}
+}
+https://api.jquery.com/remove/
 $(function(){
 	$('#id_bathroomNumber option[selected=""]').attr('disabled','disabled');
 	$('#id_bedroomNumber option[selected=""]').attr('disabled','disabled');
-	$('#bookForm').submit(function(){
-		if( !validateEmail(emailaddress)){
-			console.log('not validated');
-		} else {console.log('valid');}
-	});
 });

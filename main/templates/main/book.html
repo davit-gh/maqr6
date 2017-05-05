@@ -14,7 +14,7 @@
 {% endblock %}
 {% block content %}
 	<div class="container">
-	    <form id="bookFrom" class="form-horizontal" method="post" action="">
+	    <form id="bookForm" class="form-horizontal" method="post" action="">
 	    	{% csrf_token %}
 			<div class="row">
 				{{ form.non_field_errors }}
