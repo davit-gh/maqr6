@@ -9,6 +9,8 @@ class ReviewForm(forms.ModelForm):
 			'reviewText': 'If you have tried our service please let us know what you think.'
 		}
 
+class PhoneInput(forms.widgets.Input):
+	input_type = "tel"
 		
 class OrderForm(forms.ModelForm):
 	
@@ -50,7 +52,7 @@ class OrderForm(forms.ModelForm):
 			'bathroomNumber': forms.Select(choices=BATHROOM_CHOICES, attrs={'onchange': 'addToPrice(this);'}),
 			'extras': forms.CheckboxSelectMultiple(choices=EXTRA_CHOICES, attrs={'onchange': 'addToPriceExtras(this);'}),
 			#'howOften': forms.CheckboxSelectMultiple(choices=HOWOFTEN_CHOICES),
-			'phone': forms.TextInput()
+			'phone': PhoneInput()
 		}
 		labels = {
 			'fullName': 'Your full name',
