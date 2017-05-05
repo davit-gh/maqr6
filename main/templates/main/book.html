@@ -4,10 +4,10 @@
 	Maqr6 | Forget about the cleaning, enjoy the result!
 {% endblock %}
 {% block extra_head %}
-	<script src="{% static 'js/jquery.maskedinput.min.js' %}"></script>
+	<script src="{% static 'js/jquery.mask.min.js' %}"></script>
 	<script type="text/javascript">
 		$(function(){
-			$("#id_phone").mask("999 99-99-99",{placeholder:"xxx xx-xx-xx"});
+			$("#id_phone").mask("(000) 00-00-00",{placeholder:"(xxx) xx-xx-xx"});
 		});
 	</script>
 	{{ form.media }}
