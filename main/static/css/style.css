@@ -46,7 +46,7 @@ h1{
 
 .modify-select .select-side {
   position: absolute;
-  top: 93px;
+  top: 27px;
   right: 27px;
   pointer-events: none;
 }
@@ -101,7 +101,7 @@ p#hlp-txt{
 div.header-img{
   width: auto;
   height: 500px;
-  background: linear-gradient(0deg,rgba(27, 23, 26, 0.49),rgba(2, 39, 56, 0.3)),url('../img/bg.jpg');
+  background: linear-gradient(0deg,rgba(27, 23, 26, 0.75),rgba(2, 39, 56, 0.84)),url('../img/bg.jpg');
   text-align:center;
   position:relative;
 }
@@ -126,7 +126,6 @@ div.header-img .header-txt, .contact-page .header-txt{
     left:0;
     right:0;
     bottom:0;
-  color: #fff;
 }
 
 .navbar{
@@ -174,7 +173,7 @@ span.required:before { content: '*'; }
   padding: 15px;
 }
 
-.white{
+.white h1, .white h2{
   color: #fff;
 }
 

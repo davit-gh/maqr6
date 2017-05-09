@@ -84,7 +84,8 @@ class ContactForm(forms.ModelForm):
 		]
 
 		widgets = {
-			'contactReason': forms.Select(choices=CONTACTCHOICES)
+			'contactReason': forms.Select(choices=CONTACTCHOICES),
+			'email': forms.EmailInput(attrs={'onblur': 'verifyEmail(this)'})
 		}
 
 		help_texts = {

@@ -7,7 +7,7 @@
 {% block content %}
 
 	<div class="contact-page subheader">
-		<div class="header-txt">
+		<div class="header-txt white">
 			<h1>{{ pageHeader.title }}</h1>
 			<h2>{{ pageHeader.strapline }}</h2>
 		</div>
@@ -21,6 +21,7 @@
 							<div class="row">
 								{{ form.non_field_errors }}
 								<div class="col-md-6 col-sm-12 modify-select">
+									{{ form.contactReason.errors }}
 									<h3>{{ form.contactReason.help_text|first }}</h3>
 									<p class="text-muted">{{ form.contactReason.help_text|last }}</p>
 									
@@ -31,13 +32,19 @@
 									
 								</div>
 								<div class="col-md-6 col-sm-12">
+									{% for err in form.email.errors %}
+										<div class="alert alert-danger">{{ err }}</div>
+									{% endfor %}
 									<h3>{{ form.email.help_text|first }}</h3>
 									<p class="text-muted">{{ form.email.help_text|last }}</p>
-									{% render_field form.email class="form-control" placeholder="Email" %}
+									{% with ph=form.email.name|capfirst %}
+										{% render_field form.email class="form-control" placeholder=ph %}
+									{% endwith %}
 								</div>
 							</div>
 							<div class="row">		
 								<div class="col-md-12">
+									{{ form.text.errors }}
 									<h3>{{ form.text.help_text|first }}</h3>
 									<p class="text-muted">{{ form.text.help_text|last }}</p>
 									{% render_field form.text class="form-control" %}
