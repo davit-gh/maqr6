@@ -1,13 +1,22 @@
+# -*- coding: utf-8 -*-
 from django import forms
 from models import Review, Order, Contact
 from datetimewidget.widgets import DateTimeWidget
+from django.utils.translation import ugettext as _
+
 class ReviewForm(forms.ModelForm):
 	class Meta:
 		model = Review
 		fields = ['author', 'rating', 'reviewText']
 		help_texts = {
-			'reviewText': 'If you have tried our service please let us know what you think.'
+			'reviewText': _('If you have tried our service please let us know what you think.'),
+			'rating'	: _('Please rate the service')
+		}	
+		labels = {
+			'author'	: _('Your name'),
+			'reviewText': _('Any feedback?')
 		}
+
 
 class PhoneInput(forms.widgets.Input):
 	input_type = "tel"
@@ -19,31 +28,31 @@ class OrderForm(forms.ModelForm):
 									options={'startDate': '+1d'},
 									attrs={'required': 'required'}
 								),
-						label = 'Date and time',
+						label = _('Date and time'),
 						input_formats=['%d/%m/%Y %H:%M'],
-						help_text='Please set the date and the time of your cleaning.'
+						help_text=_('Please set the date and the time of your cleaning.')
 					)
 	class Meta:
 		def make_array(item, num, initial_text):
 			i = 1
 			lst = [('', initial_text)]
 			while i <= num:
-				lst += [(i, '{} {}'.format(i, item))]
+				lst += [(i, '%s %s'%(i, item))]
 				i += 1
 			return lst
 		
-		BEDROOM_CHOICES = make_array('Bedroom', 6, "How many bedrooms?")
-		BATHROOM_CHOICES = make_array('Bathroom', 6, "How many bathrooms?")
+		BEDROOM_CHOICES = make_array(_('Bedroom'), 6, _("How many bedrooms?"))
+		BATHROOM_CHOICES = make_array(_('Bathroom'), 6, _("How many bathrooms?"))
 		EXTRA_CHOICES = [
-			('fridge', 'Inside Fridge'),
-			('oven', 'Inside Oven'),
-			('basement', 'Basement')
+			('fridge', _('Inside Fridge')),
+			('oven', _('Inside Oven')),
+			('basement', _('Basement'))
 		]
 		HOWOFTEN_CHOICES = [
-			('onetime', '1 time'),
-			('everyweek', 'Every Week'),
-			('every2weeks', 'Every 2 weeks'),
-			('every4weeks', 'Every 4 weeks'),
+			('onetime', _('1 time')),
+			('everyweek', _('Every Week')),
+			('every2weeks', _('Every 2 weeks')),
+			('every4weeks', _('Every 4 weeks')),
 		]
 		model = Order
 		fields = '__all__'
@@ -56,31 +65,30 @@ class OrderForm(forms.ModelForm):
 			'email': forms.EmailInput(attrs={'onblur': 'verifyEmail(this)'})
 		}
 		labels = {
-			'fullName': 'Your full name',
-			'phone': 'Your mobile'
+			'fullName': _('Your full name'),
+			'phone': _('Your mobile'),
+			'email': _('Your email'),
+			'address': _('Address')
 		}
 		help_texts = {
-			'address': 'The address of the space to be cleaned.',
-			'city': 'We provide service only in Yerevan at this time.'
+			'address': _('The address of the space to be cleaned.'),
+			'city': _('We provide service only in Yerevan at this time.')
 		}
 	
 
 
 class ContactForm(forms.ModelForm):
-	def __init__(self, *args, **kwargs):
-		super(ContactForm, self).__init__(*args, **kwargs)
-		self.fields['contactReason'].help_text2 = 'some help text'
 	class Meta:
 		model = Contact
 		fields = '__all__'
 
 		CONTACTCHOICES = [
-			(0, "I have a question before I book"),
-			(1, "I have a question about my paypent"),
-			(2, "I would like to change my booking"),
-			(3, "I am confused about how something works"),
-			(4, "I have a customer service comment"),
-			(5, "Other")
+			(0, _("I have a question before I book")),
+			(1, _("I have a question about my paypent")),
+			(2, _("I would like to change my booking")),
+			(3, _("I am confused about how something works")),
+			(4, _("I have a customer service comment")),
+			(5, _("Other"))
 		]
 
 		widgets = {
@@ -90,16 +98,16 @@ class ContactForm(forms.ModelForm):
 
 		help_texts = {
 			'contacetReason': [
-				'What do you need help with?',
-				'This helps us make sure you get the right answer as fast as possible'
+				_('What do you need help with?'),
+				_('This helps us make sure you get the right answer as fast as possible')
 			],
 			'text': [
-				'What\'s your question, comment or issue?',
-				'Give us as much detail as you can. The more we know, the better we can help you.'
+				_('What\'s your question, comment or issue?'),
+				_('Give us as much detail as you can. The more we know, the better we can help you.')
 			],
 			'email': [
-				'What\'s your email address?',
-				'We need this so we can reply to you. Please make sure that it\'s right.'
+				_('What\'s your email address?'),
+				_('We need this so we can reply to you. Please make sure that it\'s right.')
 			]
 		}
 

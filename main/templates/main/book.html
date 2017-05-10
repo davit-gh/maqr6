@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load widget_tweaks static %}
+{% load widget_tweaks static i18n %}
 {% block title %}
 	Maqr6 | Forget about the cleaning, enjoy the result!
 {% endblock %}
@@ -18,7 +18,7 @@
 	    	{% csrf_token %}
 			<div class="row">
 				{{ form.non_field_errors }}
-				<h3 class="text-center">Tell us about yourself</h3>
+				<h3 class="text-center">{% trans 'Tell us about yourself' %}</h3>
 				<div class="container">
 					<div class="form-group">
 						
@@ -40,7 +40,7 @@
 							</div>
 						
 							<div class="col-md-6 col-md-offset-3 col-sm-12">
-								{% with ph=form.email.name|capfirst %}
+								{% with ph=form.email.label %}
 									{{ form.email.errors }}
 									{% render_field form.email  class="form-control top20" placeholder=ph %}
 								{% endwith %}
@@ -51,14 +51,14 @@
 				<hr>
 				
 				<div class="row">
-					<h3 class="text-center">Service Area</h3>
+					<h3 class="text-center">{% trans 'Service Area' %}</h3>
 					<div class="container">
 						<div class="form-group">
 							<div class="col-md-6 col-sm-12">
 								{{ form.address.errors }}
 								<p class="text-muted">{{ form.address.help_text }}</p>
 								<span class="required loweraddress"></span>
-								{% with ph=form.address.name|capfirst  %}
+								{% with ph=form.address.label  %}
 									{% render_field form.address placeholder=ph class="form-control" %}
 								{% endwith %}
 								
@@ -72,7 +72,7 @@
 				<hr>
 				
 			<div class="row">
-				<h3 class="text-center">Tell us about your home</h3>
+				<h3 class="text-center">{% trans 'Tell us about your home' %}</h3>
 				<div class="container">
 					<div class="form-group {% if form.bedroomNumber.errors or form.bathroomNumber.errors %}has-error{% endif %}">
 						<div class="col-md-6 col-sm-12 modify-select">
@@ -106,7 +106,7 @@
 			</div>
 			<hr>
 			<div class="row">
-				<h3 class="text-center"> Extras</h3>
+				<h3 class="text-center">{% trans 'Extras' %}</h3>
 				<div class="text-center">
 					{{ form.extras.errors }}
 					{% render_field form.extras %}
@@ -115,7 +115,7 @@
 			</div>
 			<hr>
 			<div class="row">
-				<h3 class="text-center"> When do you want us to come?</h3>
+				<h3 class="text-center">{% trans 'When do you want us to come?' %}</h3>
 				<div class="container">
 					<div class="form-group {% if form.dateOfService.errors %}has-error{% endif %}">
 						<div class="col-md-4 col-md-offset-4 col-sm-12">
@@ -146,10 +146,10 @@
 		-->		
 			<div class="row">
 
-				<h3 class="text-center">You will pay: {% render_field form.cost readonly="readonly" %} AMD</h3>
+				<h3 class="text-center">{% trans 'You will pay:' %} {% render_field form.cost readonly="readonly" %} {% trans 'AMD' %}</h3>
 			</div>
 			<div class="col-xs-12 text-center">
-				<button type="submit" class="btn btn-primary"> Book Now</button>
+				<button type="submit" class="btn btn-primary">{% trans 'Book Now' %}</button>
 			</div>
 		</form>
 	</div>

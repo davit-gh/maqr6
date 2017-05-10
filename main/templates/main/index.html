@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
-{% load static range %}
+{% load static range i18n %}
 {% block title %}
-	Maqr6 | Forget about cleaning, enjoy the result!
+	{% trans 'Maqr6 | Forget about cleaning, enjoy the result!' %}
 {% endblock %}
 
 {% block extra_head %}
@@ -13,30 +13,30 @@
 {% block content %}    
     <div class="header-img subheader">
       <div class="header-txt white">
-        <h1>Cleaning Services in Yerevan</h1>
-        <h2>{{ pageHeader.strapline }}</h2>
-        <a class="btn btn-primary btn-lg" href="{% url 'book' %}">Book Now</a>
+        <h1>{% trans 'Cleaning Services in Yerevan' %}</h1>
+        <h2>{% trans pageHeader.strapline %}</h2>
+        <a class="btn btn-primary btn-lg" href="{% url 'book' %}">{% trans 'Book Now' %}</a>
       </div>
     </div>
     <section>
         <div class="container">
             <div class="row">
-          	    <h2 class="text-center">How It Works</h2>
+          	    <h2 class="text-center">{% trans 'How It Works' %}</h2>
 
               	<div class="col-xs-12 col-sm-4 text-center">
                     <img src="{% static 'img/step1.png' %}" class="img-responsive">
                     <i class="glyphicon glyphicon-phone icon-howitworks"></i>
-                		<p>Book a cleaning on our website</p>
+                		<p>{% trans 'Book a cleaning on our website' %}</p>
               	</div>
               	<div class="col-xs-12 col-sm-4 text-center">
                     <img src="{% static 'img/step2.png' %}" class="img-responsive">
                     <i class="glyphicon glyphicon-menu-right icon-howitworks"></i>
-                		<p>Our professional staff will visit your place and do the cleaning</p>
+                		<p>{% trans 'Our professional staff will visit your place and do the cleaning' %}</p>
               	</div>
               	<div class="col-xs-12 col-sm-4 text-center">
                     <img src="{% static 'img/step3.jpg' %}" class="img-responsive">
                     <i class="glyphicon glyphicon-ok icon-howitworks"></i>
-                		<p>Sit back and enjoy your fresh home.</p>
+                		<p>{% trans 'Sit back and enjoy your fresh home.' %}</p>
               	</div>
             </div>
         </div>
@@ -45,7 +45,7 @@
   	<section>
         <div class="container">
             <div class="row">
-              	<h2 class="text-center">What Users Say</h2>
+              	<h2 class="text-center">{% trans 'What Users Say' %}</h2>
                   {% for review in reviews %}                          
                       <div class="col-xs-12 col-sm-4">
                         <div class="transp-bg">
@@ -72,48 +72,48 @@
     </section>
     <section class="trust top20">
         <div class="container">
-            <h2 class="text-center">Your Trust And Security Are Our Priority</h2>
+            <h2 class="text-center">{% trans 'Your Trust And Security Are Our Priority' %}</h2>
             <div class="row">
                 <div class="col-md-4 col-sm-6 col-xs-12">
                   <p class="text-center"><i class="fa fa-hourglass-o fa-2x" aria-hidden="true"></i></p>
-                  <h3 class="text-center">Saves You Time</h3>
+                  <h3 class="text-center">{% trans 'Saves You Time' %}</h3>
                   <p class="text-muted">
-                    Maqr6 helps you live smarter, giving you time to focus on what’s most important.
+                    {% trans 'Maqr6 helps you live smarter, giving you time to focus on what\’s most important.' %}
                   </p>
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12">
                   <p class="text-center"><i class="fa fa-shield fa-2x" aria-hidden="true"></i></p>
-                  <h3 class="text-center">Safety First</h3>
+                  <h3 class="text-center">{% trans 'Safety First' %}</h3>
                   <p class="text-muted">
-                    We rigorously vet all of our Cleaners, who undergo identity checks as well as in-person interviews.
+                    {% trans 'We rigorously vet all of our Cleaners, who undergo identity checks as well as in-person interviews.' %}
                   </p>
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12">
                   <p class="text-center"><i class="fa fa-certificate fa-2x" aria-hidden="true"></i></p>
-                  <h3 class="text-center">Only The Best Quality</h3>
+                  <h3 class="text-center">{% trans 'Only The Best Quality' %}</h3>
                   <p class="text-muted">
-                    Our skilled professionals go above and beyond on every job. Cleaners are rated and reviewed after each task. Only 5 star Cleaners are kept.
+                    {% trans 'Our skilled professionals go above and beyond on every job. Cleaners are rated and reviewed after each task. Only 5 star Cleaners are kept.' %}
                   </p>
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12">
                   <p class="text-center"><i class="fa fa-check fa-2x" aria-hidden="true"></i></p>
-                  <h3 class="text-center">Easy To Get Help</h3>
+                  <h3 class="text-center">{% trans 'Easy To Get Help' %}</h3>
                   <p class="text-muted">
-                    We bring our own safe supplies. Let us know of any special requests and we’ll make it happen.
+                    {% trans 'We bring our own safe supplies. Let us know of any special requests and we\’ll make it happen.' %}
                   </p>
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12">
                   <p class="text-center"><i class="fa fa-comments fa-2x" aria-hidden="true"></i></p>
-                  <h3 class="text-center">Seamless Communication</h3>
+                  <h3 class="text-center">{% trans 'Seamless Communication' %}</h3>
                   <p class="text-muted">
-                    Online communication makes it easy for you to stay in touch with your Cleaners.
+                    {% trans 'Online communication makes it easy for you to stay in touch with your Cleaners.' %}
                   </p>
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12">
                   <p class="text-center"><i class="fa fa-balance-scale fa-2x" aria-hidden="true"></i></p>
-                  <h3 class="text-center">Fixed Prices</h3>
+                  <h3 class="text-center">{% trans 'Fixed Prices' %}</h3>
                   <p class="text-muted">
-                    You get a fixed quote when you book. That's what you pay - no hidden fees or other unexpected charges.
+                    {% trans 'You get a fixed quote when you book. That\'s what you pay - no hidden fees or other unexpected charges.' %}
                   </p>
                 </div>
             </div>
@@ -127,8 +127,8 @@
             </div>
             <div class="col-sm-6 col-xs-12">
               <div class="child white">
-                <h1>You can book from your IOS or Android mobile phone</h1>
-                <h2>as easily as from PC or Mac</h2>
+                <h1>{% trans 'You can book from your IOS or Android mobile phone' %}</h1>
+                <h2>{% trans 'as easily as from PC or Mac' %}</h2>
               </div>
             </div>
           </div>
@@ -138,11 +138,11 @@
     <section class="book-appointment">
         <div class="container">
             <div class="col-xs-12 text-center">
-                <h1>Book a house cleaning in 60 seconds!</h1>
+                <h1>{% trans 'Book a house cleaning in 60 seconds!' %}</h1>
             </div>
           	<div class="col-xs-12 text-center top20">                
             		<a class="btn btn-info btn-lg" href="{% url 'book' %}"> 
-            			Book Appointment     
+            			{% trans 'Book Appointment' %}
             		</a>
           	</div>
       	</div>

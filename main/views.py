@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
+from django.utils.translation import ugettext as _
 from forms import ReviewForm, OrderForm, ContactForm
 from models import Review
 from includes.viewinclude import FormClass
@@ -11,8 +12,8 @@ def index(request):
 	context = {
 		'reviews': reviews,
 		'pageHeader': {
-			'title': 'Maqr6',
-			'strapline': 'Shine like your house will!'
+			'title': _('Maqr6'),
+			'strapline': _('Shine like your house will!')
 		}
 	}
 	return render(request, 'main/index.html', context)
@@ -21,27 +22,27 @@ def index(request):
 def rate(request):
 	form =  FormClass(
 				ReviewForm, 
-				"Maqr6", 
-				'Please take the time to rate our service.'
+				_('Maqr6'), 
+				_('Please take the time to rate our service.')
 			)
    	return  form.processForm(
 				request,		
-				"Your review has been saved, thank you! If this is your first order we'll call you to verify.",
-				"index",
-				"main/rate.html",
+				_('Your review has been saved, thank you!'),
+				'index',
+				'main/rate.html',
 			)
 	
 
 def book(request):
 	form =  FormClass(
 				OrderForm, 
-				"Maqr6", 
-				'Please provide the details of your booking.'
+				_('Maqr6'), 
+				_('Please provide the details of your booking.')
 			)
 	return  form.processForm(
 				request,
-				"Your order has been recorded, thank you! If this is your first order we'll call you for verification.",
-				"index",
+				_('Your order has been recorded, thank you! If this is your first order we\'ll call you for verification.'),
+				'index',
 				'main/book.html'
    			)
 
@@ -49,21 +50,21 @@ def book(request):
 def contact(request):
 	form  = FormClass(
 				ContactForm, 
-				'Questions? We are happy to answer!',
-				'There are exactly 4 ways you can reach us.'
+				_('Questions? We are happy to answer!'),
+				_('There are exactly 4 ways you can reach us.')
 			)
 	contact_methods = {
-		'method1': 'Get fast answers on Facebook: <a href="https://facebook.com">Maqr6</a>',
-		'method2': 'Email us directly at: support@maqr6.am',
-		'method3': 'TEXT us on mobile at: 094 43-34-16'
+		'method1': _('Get fast answers on Facebook: <a href="https://facebook.com">Maqr6</a>'),
+		'method2': _('Email us directly at: support@maqr6.am'),
+		'method3': _('TEXT us on mobile at: 094 43-34-16')
 	}
 
 	form.addContext(**contact_methods)
 
 	return  form.processForm(
 				request,
-				"We received your message, we'll get back to you very soon. Thank you!",
-				"index",
+				_('We received your message, we\'ll get back to you very soon. Thank you!'),
+				'index',
 				'main/contact.html'
    			)
 	

@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load widget_tweaks %}
+{% load widget_tweaks i18n %}
 {% block title %}
 	Maqr6 | Contact us - forget about cleaning!
 {% endblock %}
@@ -51,7 +51,7 @@
 								</div>
 							</div>
 							<div class="row text-center top20">
-								<button class="btn btn-primary"> Send </button>
+								<button class="btn btn-primary">{% trans 'Send' %}</button>
 							</div>
 						</form>
 				</div>

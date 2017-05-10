@@ -1,0 +1,392 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-10 20:28+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: main/forms.py:12
+msgid "If you have tried our service please let us know what you think."
+msgstr "Եթե օգտվել եք մեր ծառայությունից, խնդրում ենք գրել Ձեր կարծիքը"
+
+#: main/forms.py:13
+msgid "Please rate the service"
+msgstr "Խնդրում ենք գնահատել ծառայությունը"
+
+#: main/forms.py:16
+msgid "Your name"
+msgstr "Ձեր անունը"
+
+#: main/forms.py:17
+msgid "Any feedback?"
+msgstr "Ունե՞ք կարծիք"
+
+#: main/forms.py:31
+msgid "Date and time"
+msgstr "Ամսաթիվ և ժամ"
+
+#: main/forms.py:33
+msgid "Please set the date and the time of your cleaning."
+msgstr "Խնդրում ենք նշել մաքրման ամսաթիվն ու ժամը"
+
+#: main/forms.py:44
+msgid "Bedroom"
+msgstr "Սենյակ"
+
+#: main/forms.py:44
+msgid "How many bedrooms?"
+msgstr "Քանի՞ սենյակ"
+
+#: main/forms.py:45
+msgid "Bathroom"
+msgstr "Բաղնիք/Զուգարան"
+
+#: main/forms.py:45
+msgid "How many bathrooms?"
+msgstr "Քանի՞ բաղնիք/զուգարան"
+
+#: main/forms.py:47
+msgid "Inside Fridge"
+msgstr "Սառնարանի ներսը"
+
+#: main/forms.py:48
+msgid "Inside Oven"
+msgstr "էլ․ վառարանի ներսը"
+
+#: main/forms.py:49
+msgid "Basement"
+msgstr "Նկուղ"
+
+#: main/forms.py:52
+msgid "1 time"
+msgstr "1 անգամ"
+
+#: main/forms.py:53
+msgid "Every Week"
+msgstr "Ամեն շաբաթ"
+
+#: main/forms.py:54
+msgid "Every 2 weeks"
+msgstr "Ամեն 2 շաբաթը մեկ"
+
+#: main/forms.py:55
+msgid "Every 4 weeks"
+msgstr "Ամեն 4 շաբաթը մեկ"
+
+#: main/forms.py:68
+msgid "Your full name"
+msgstr "Ձեր անուն/ազգանունը"
+
+#: main/forms.py:69
+msgid "Your mobile"
+msgstr "Բջջային հեռ․"
+
+#: main/forms.py:70
+msgid "Your email"
+msgstr "Ձեր էլ․ հասցեն"
+
+#: main/forms.py:71
+msgid "Address"
+msgstr "Հասցե"
+
+#: main/forms.py:74
+msgid "The address of the space to be cleaned."
+msgstr "Հասցեն, որտեղ պետք է կատարվի պատվերը։"
+
+#: main/forms.py:75
+msgid "We provide service only in Yerevan at this time."
+msgstr "Առայժմ ծառայությունը գործում է միայն Երևանում։"
+
+#: main/forms.py:86
+msgid "I have a question before I book"
+msgstr "Ես հարց ունեմ պատվիրելուց առաջ"
+
+#: main/forms.py:87
+msgid "I have a question about my paypent"
+msgstr "Ես հարց ունեմ վճարման վերաբերյալ"
+
+#: main/forms.py:88
+msgid "I would like to change my booking"
+msgstr "Ես կուզեի փոփոխել պատվերի տվյալները"
+
+#: main/forms.py:89
+msgid "I am confused about how something works"
+msgstr "Ինձ համար պարզ չէ ինչպես է ինչ-որ բան աշխատում"
+
+#: main/forms.py:90
+msgid "I have a customer service comment"
+msgstr "Ես կարծիք ունեմ հաճախորդների սպասարկման վերաբերյալ"
+
+#: main/forms.py:91
+msgid "Other"
+msgstr "Այլ"
+
+#: main/forms.py:101
+msgid "What do you need help with?"
+msgstr "Ինչպիսի՞ օգնության կարիք ունեք"
+
+#: main/forms.py:102
+msgid "This helps us make sure you get the right answer as fast as possible"
+msgstr "Սա օգնում է մեզ հնարավորինս շուտ գտնել Ձեզ համապատասխան պատասխանը"
+
+#: main/forms.py:105
+msgid "What's your question, comment or issue?"
+msgstr "Ո՞րն է Ձեր հարցը, կարծիքը կամ խնդիրը"
+
+#: main/forms.py:106
+msgid ""
+"Give us as much detail as you can. The more we know, the better we can help "
+"you."
+msgstr ""
+"Խնդրում ենք հնարավորինս մանրամասնել։ Ինչքան մանրամասն այնքան ավելի "
+"արդյունավետ կարող ենք օգնել"
+
+#: main/forms.py:109
+msgid "What's your email address?"
+msgstr "Ո՞րն է Ձեր էլ․ հասցեն"
+
+#: main/forms.py:110
+msgid "We need this so we can reply to you. Please make sure that it's right."
+msgstr "ՄԵզ սա պետք է, որ պատասխանենք։ Խնդրում ենք համոզվել, որ ճիշտ է գրված"
+
+#: main/models.py:22
+msgid "Yerevan"
+msgstr "Երևան"
+
+#: main/templates/base.html:23 main/templates/base.html:71 main/views.py:15
+#: main/views.py:25 main/views.py:39
+msgid "Maqr6"
+msgstr "Մաքր6"
+
+#: main/templates/base.html:29
+msgid "Book in 60 seconds"
+msgstr "Պատվիրե՛ք 60 վայրկյանում"
+
+#: main/templates/base.html:30
+msgid "Rate"
+msgstr "Գնահատել"
+
+#: main/templates/base.html:31
+msgid "Contact"
+msgstr "Կապվել Մեզ"
+
+#: main/templates/main/book.html:21
+msgid "Tell us about yourself"
+msgstr "Պատմեք Մեզ Ձեր Մասին"
+
+#: main/templates/main/book.html:54
+msgid "Service Area"
+msgstr "Ծառայության Տարածքը"
+
+#: main/templates/main/book.html:75
+msgid "Tell us about your home"
+msgstr "Պատմեք Մեզ Ձեր Տան Մասին"
+
+#: main/templates/main/book.html:109
+msgid "Extras"
+msgstr "Լրացուցիչ"
+
+#: main/templates/main/book.html:118
+msgid "When do you want us to come?"
+msgstr "Ե՞րբ Այցելենք Ձեզ"
+
+#: main/templates/main/book.html:149
+msgid "You will pay:"
+msgstr "Դուք կվճարեք՝"
+
+#: main/templates/main/book.html:149
+msgid "AMD"
+msgstr "Դրամ"
+
+#: main/templates/main/book.html:152 main/templates/main/index.html:18
+msgid "Book Now"
+msgstr "Պատվիրել Հիմա"
+
+#: main/templates/main/contact.html:54
+msgid "Send"
+msgstr "Ուղարկել"
+
+#: main/templates/main/index.html:4
+msgid "Maqr6 | Forget about cleaning, enjoy the result!"
+msgstr "Մաքր6 | Մոռացեք մաքրելու մասին, վայելե՛ք արդյունքը"
+
+#: main/templates/main/index.html:16
+msgid "Cleaning Services in Yerevan"
+msgstr "Մաքրման ծառայություն Երևանում"
+
+#: main/templates/main/index.html:24
+msgid "How It Works"
+msgstr "Ինչպե՞ս է աշխատում"
+
+#: main/templates/main/index.html:29
+msgid "Book a cleaning on our website"
+msgstr "Պատվիրեք մաքրման աշխատանքներ մեր կայքով"
+
+#: main/templates/main/index.html:34
+msgid "Our professional staff will visit your place and do the cleaning"
+msgstr ""
+"Մեր մասնագիտացված անձնակազմը կայցելի Ձեր նշած վայրը և կկատարի մաքրությունը"
+
+#: main/templates/main/index.html:39
+msgid "Sit back and enjoy your fresh home."
+msgstr "Ժպտացեք, վայելեք Ձեր տան թարմությունը"
+
+#: main/templates/main/index.html:48
+msgid "What Users Say"
+msgstr "Ի՞նչ են Ասում Հաճախորդները"
+
+#: main/templates/main/index.html:75
+msgid "Your Trust And Security Are Our Priority"
+msgstr "Ձեր վստահությունն ու անվտանգությունը առաջնահերթ են մեզ համար"
+
+#: main/templates/main/index.html:79
+msgid "Saves You Time"
+msgstr "Խնայում է Ձեր Ժամանակը"
+
+#: main/templates/main/index.html:81
+msgid ""
+"Maqr6 helps you live smarter, giving you time to focus on what\\’s most "
+"important."
+msgstr ""
+"'Մաքր6'-ը օգնում է Ձեզ ապրել ավելի խելացի, տրամադրելով ժամանակ կենտրոնանալու "
+"կարևորի վրա"
+
+#: main/templates/main/index.html:86
+msgid "Safety First"
+msgstr "Առաջինն Անվտանգությունը"
+
+#: main/templates/main/index.html:88
+msgid ""
+"We rigorously vet all of our Cleaners, who undergo identity checks as well "
+"as in-person interviews."
+msgstr ""
+"Մենք մանրակրկիտ ընտրում ենք մեր Մաքրարարներին։ Նրանք ընտրվում են "
+"հարցազրույցով՝ըստ փորձի, ազնվության և բարեխղճության"
+
+#: main/templates/main/index.html:93
+msgid "Only The Best Quality"
+msgstr "Միայն Լավագույն Որակը"
+
+#: main/templates/main/index.html:95
+msgid ""
+"Our skilled professionals go above and beyond on every job. Cleaners are "
+"rated and reviewed after each task. Only 5 star Cleaners are kept."
+msgstr ""
+"Մեր հմուտ մասնագետները ներդնում են առավելագույն հնարավոր ջանքը բոլոր "
+"պատվերների համար։Մաքրարարները գնահատվում են յուրաքանչյուր աշխատանից հետո, "
+"մնում է միայն հաճախորդների կողմից միջինը 4․5 աստղից բարձր ստացած անձնակազմը"
+
+#: main/templates/main/index.html:100
+msgid "Easy To Get Help"
+msgstr "Հեշտ է Ստանալ Օգնություն"
+
+#: main/templates/main/index.html:102
+msgid ""
+"We bring our own safe supplies. Let us know of any special requests and we"
+"\\’ll make it happen."
+msgstr ""
+"Մենք բերում ենք մեզ հետ մաքրության անվտանգ պարագաները։ Հայտնեք Ձեր հատուկ "
+"նկատառումները, մենք կիրականացնենք դրանք։"
+
+#: main/templates/main/index.html:107
+msgid "Seamless Communication"
+msgstr "Դյուրին շփում"
+
+#: main/templates/main/index.html:109
+msgid ""
+"Online communication makes it easy for you to stay in touch with your "
+"Cleaners."
+msgstr "Օնլայն շփումը հեշտացնում է կապը մաքրարարների հետ"
+
+#: main/templates/main/index.html:114
+msgid "Fixed Prices"
+msgstr "Ֆիքսված Գներ"
+
+#: main/templates/main/index.html:116
+msgid "You get a fixed quote when you book. That\\"
+msgstr ""
+"Պատվերի տվյալները լրացնելիս Դուք տեսնում եք ֆիքսված գին, որ պետք է վճարեք։ "
+"Ոչ մի այլ թաքնված վճար։"
+
+#: main/templates/main/index.html:130
+msgid "You can book from your IOS or Android mobile phone"
+msgstr "Կարող եք պատվրել նաև Ձեր IOS և Android հեռախոսներով"
+
+#: main/templates/main/index.html:131
+msgid "as easily as from PC or Mac"
+msgstr "այնքան հեշտ որքան համակարգով"
+
+#: main/templates/main/index.html:141
+msgid "Book a house cleaning in 60 seconds!"
+msgstr "Պատվիրե՛ք տան մաքրում 60 վայրկյանում"
+
+#: main/templates/main/index.html:145
+msgid "Book Appointment"
+msgstr "Պատվիրեք Մաքրակազմ"
+
+#: main/templates/main/rate.html:39
+msgid "Rate Now"
+msgstr "Գնահատել Հիմա"
+
+#: main/views.py:16
+msgid "Shine like your house will!"
+msgstr "Փայլի՛ր, ինչպես քո տունը կփայլի"
+
+#: main/views.py:26
+msgid "Please take the time to rate our service."
+msgstr "Խնդրում ենք գնահատեք մեր ծառայությունը, երկար չի տևի։"
+
+#: main/views.py:30
+msgid "Your review has been saved, thank you!"
+msgstr "Ձեր կարծիքը պահպանվեց, շնորհակալությու՛ն"
+
+#: main/views.py:40
+msgid "Please provide the details of your booking."
+msgstr "Խնդրում ենք նշել Ձեր պատվերի մանրամասները։"
+
+#: main/views.py:44
+msgid ""
+"Your order has been recorded, thank you! If this is your first order we'll "
+"call you for verification."
+msgstr ""
+"Ձեր պատվերը գրանցվեց, շնորհակալությու՛ն։ Եթե սա Ձեր առաջին պատվերն է, մենք "
+"կզանգենք համողվելու, որ ամեն ինչ ճիշտ է։"
+
+#: main/views.py:53
+msgid "Questions? We are happy to answer!"
+msgstr "Հարցե՞ր, ուրախ կլինենք պատասխանե՛լ։"
+
+#: main/views.py:54
+msgid "There are exactly 4 ways you can reach us."
+msgstr "Մեզ հետ կապվելու ուղիղ 4 եղանակ կա։"
+
+#: main/views.py:57
+msgid ""
+"Get fast answers on Facebook: <a href=\"https://facebook.com\">Maqr6</a>"
+msgstr ""
+"Ստացեք արագ պատասխաններ ՖԲ-ով՝ <a href=\"https://facebook.com\">Մաքր6</a>"
+
+#: main/views.py:58
+msgid "Email us directly at: support@maqr6.am"
+msgstr "Ուղիղ նամակ ուղարկեք մեզ՝ support@maqr6.am"
+
+#: main/views.py:59
+msgid "TEXT us on mobile at: 094 43-34-16"
+msgstr "Կարճ հաղորդագրություն ուղարկեք մեզ՝ 094 43-34-16"
+
+#: main/views.py:66
+msgid "We received your message, we'll get back to you very soon. Thank you!"
+msgstr "Մենք ստացանք Ձեր նամակը, կպատասխանենք շատ շուտով։ Շնորհակալությու՛ն։"

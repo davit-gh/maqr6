@@ -1,4 +1,4 @@
-{% load static %}
+{% load static i18n %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,15 +20,15 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand" href="/">Maqr6</a>
+	      <a class="navbar-brand" href="/">{% trans 'Maqr6' %}</a>
 	    </div>
 
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
-	        <li class="{% if request.resolver_match.url_name == 'book' %}active{% endif %}"><a href="{% url 'book' %}">Book in 60 seconds</a></li>
-	        <li class="{% if request.resolver_match.url_name == 'rate' %}active{% endif %}"><a href="{% url 'rate' %}">Rate</a></li>
-	        <li class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}"><a href="{% url 'contact' %}">Contact</a></li>
+	        <li class="{% if request.resolver_match.url_name == 'book' %}active{% endif %}"><a href="{% url 'book' %}">{% trans 'Book in 60 seconds' %}</a></li>
+	        <li class="{% if request.resolver_match.url_name == 'rate' %}active{% endif %}"><a href="{% url 'rate' %}">{% trans 'Rate' %}</a></li>
+	        <li class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}"><a href="{% url 'contact' %}">{% trans 'Contact' %}</a></li>
 	      </ul>
 	      
 	      
@@ -39,7 +39,7 @@
 		{% block header %}
 			<div id="header" class="page-header">
 		        <div class="row">
-		        	<div class="col-lg-6">
+		        	<div class="col-xs-12">
 		            	<h1>{{ pageHeader.title }}
 		            		<small> 
 		          	  			&nbsp;	{{ pageHeader.strapline }}
@@ -68,7 +68,7 @@
 	<footer>
         <div class="row">
           	<div class="col-xs-12 text-center">
-            	<small> &copy Maqr6 2017</small>
+            	<small> &copy {% trans 'Maqr6' %} 2017</small>
             </div>
         </div>
 	</footer>

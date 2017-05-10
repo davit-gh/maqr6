@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
+from django.utils.translation import ugettext_lazy as _
 from django.utils import timezone
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
@@ -18,7 +19,7 @@ class Order(models.Model):
 	email = models.EmailField(blank=True)
 	phone = models.CharField(max_length=20)
 	address = models.CharField(max_length=100)
-	city = models.CharField(max_length=50, default="Yerevan")
+	city = models.CharField(max_length=50, default=_("Yerevan"))
 	bedroomNumber = models.IntegerField(
 		validators=[
 			MinValueValidator(1),
