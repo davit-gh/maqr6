@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-10 20:28+0400\n"
+"POT-Creation-Date: 2017-05-11 11:42+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -286,7 +286,7 @@ msgid ""
 "rated and reviewed after each task. Only 5 star Cleaners are kept."
 msgstr ""
 "Մեր հմուտ մասնագետները ներդնում են առավելագույն հնարավոր ջանքը բոլոր "
-"պատվերների համար։Մաքրարարները գնահատվում են յուրաքանչյուր աշխատանից հետո, "
+"պատվերները կատարելիս։ Մաքրարարները գնահատվում են յուրաքանչյուր աշխատանից հետո, "
 "մնում է միայն հաճախորդների կողմից միջինը 4․5 աստղից բարձր ստացած անձնակազմը"
 
 #: main/templates/main/index.html:100
@@ -316,10 +316,12 @@ msgid "Fixed Prices"
 msgstr "Ֆիքսված Գներ"
 
 #: main/templates/main/index.html:116
-msgid "You get a fixed quote when you book. That\\"
+msgid ""
+"You get a fixed quote when you book. That is what you pay - no hidden fees "
+"or other unexpected charges."
 msgstr ""
-"Պատվերի տվյալները լրացնելիս Դուք տեսնում եք ֆիքսված գին, որ պետք է վճարեք։ "
-"Ոչ մի այլ թաքնված վճար։"
+"Պատվերի մանրամասները լրացնելիս կտեսնեք վերջնական գումարը, որ ենթակա է վճարման։ "
+"Ոչ մի այլ անսպասելի հավելավճարներ։"
 
 #: main/templates/main/index.html:130
 msgid "You can book from your IOS or Android mobile phone"
@@ -327,7 +329,7 @@ msgstr "Կարող եք պատվրել նաև Ձեր IOS և Android հեռախո
 
 #: main/templates/main/index.html:131
 msgid "as easily as from PC or Mac"
-msgstr "այնքան հեշտ որքան համակարգով"
+msgstr "այնքան հեշտ որքան համակարգչով"
 
 #: main/templates/main/index.html:141
 msgid "Book a house cleaning in 60 seconds!"
@@ -390,3 +392,10 @@ msgstr "Կարճ հաղորդագրություն ուղարկեք մեզ՝ 094 
 #: main/views.py:66
 msgid "We received your message, we'll get back to you very soon. Thank you!"
 msgstr "Մենք ստացանք Ձեր նամակը, կպատասխանենք շատ շուտով։ Շնորհակալությու՛ն։"
+
+#, fuzzy
+#~| msgid "You get a fixed quote when you book. That\\"
+#~ msgid "You get a fixed quote when you book. That\\"
+#~ msgstr ""
+#~ "Պատվերի տվյալները լրացնելիս Դուք տեսնում եք ֆիքսված գին, որ պետք է "
+#~ "վճարեք։ Ոչ մի այլ թաքնված վճար։"

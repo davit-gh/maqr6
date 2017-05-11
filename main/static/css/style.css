@@ -164,7 +164,8 @@ span.required{
   color: red;
 }
 
-span.required.lowerdate{ top: 36px; }
+div.enclosing{ position: relative; }
+span.required.lowerdate{ top: -10px; }
 span.required.loweraddress{ top: 18px; }
 span.required:before { content: '*'; }
 

@@ -7,7 +7,7 @@
 	<script src="{% static 'js/jquery.mask.min.js' %}"></script>
 	<script type="text/javascript">
 		$(function(){
-			$("#id_phone").mask("(000) 00-00-00",{placeholder:"(xxx) xx-xx-xx"});
+			$("#id_phone").mask("(000) 00-00-00");
 		});
 	</script>
 	{{ form.media }}
@@ -125,10 +125,12 @@
 								</label>
 							{% endfor %}
 							<p class="text-muted">{{ form.dateOfService.help_text }}</p>
-							<span class="required lowerdate"></span>
-							{% with ph=form.dateOfService.label %}
-								{% render_field form.dateOfService class="form-control" placeholder=ph %}
-							{% endwith %}
+							<div class="enclosing">	
+								<span class="required lowerdate"></span>
+								{% with ph=form.dateOfService.label %}
+									{% render_field form.dateOfService class="form-control" placeholder=ph %}
+								{% endwith %}
+							</div>
 							
 						</div>
 						

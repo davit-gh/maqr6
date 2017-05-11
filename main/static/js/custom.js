@@ -1,29 +1,42 @@
-var PriceManipulator = (function(el){
-	var price = 0;
-	var lastBdPrice = 0, lastBthPrice = 0,
-		lastExtra = 0;
-	var manageBedrooms = function(bdrNum){
-		lastBdPrice = bdrNum * 1000;
-		price = lastBdPrice + lastBthPrice + lastExtra;		
-	}
-
-	var manageBathrooms = function(bthrNum){
-		lastBthPrice = bthrNum * 1500;
-		price = lastBdPrice + lastBthPrice + lastExtra;
-	}
-
-	var manageExtras = function(extra){
-		var extras = {
+var PriceManipulator = (function(){
+	const PPBD = 1000, PPBTH = 1500;
+	const EXTRAS = {
 			'oven': 2000,
 			'fridge': 5000,
 			'basement': 9000
 		};
+	var price;
+	var bd = $('#id_bedroomNumber').val(), bth = $('#id_bathroomNumber').val(),
+		ext = $('#id_extras');	
+	var lastBdPrice = bd ? bd*PPBD : 0, lastBthPrice = bth ? bth*PPBTH : 0;
+		
+	var iterExtras = function(){
+		var p = 0;
+		$('#id_extras input').each(function(i,v){
+			p += v.checked ? EXTRAS[$(v).val()] : 0; 
+		});
+		return p;
+	}
+	var lastExtra = iterExtras();
+	var manageBedrooms = function(bdrNum){
+		lastBdPrice = bdrNum * PPBD;
+		price = lastBdPrice + lastBthPrice + lastExtra;	
+	}
+
+	var manageBathrooms = function(bthrNum){
+		lastBthPrice = bthrNum * PPBTH;
+		price = lastBdPrice + lastBthPrice + lastExtra;
+	}
+
+	var manageExtras = function(extra){		
 		var val = $(extra).val();
+			
 		if($(extra)[0].checked){
-			lastExtra += extras[val];
+			lastExtra += EXTRAS[val];
 		} else {
-			lastExtra -= extras[val];
+			lastExtra -= EXTRAS[val];
 		}
+		
 		price = lastBdPrice + lastBthPrice + lastExtra;
 	}
 
@@ -35,9 +48,10 @@ var PriceManipulator = (function(el){
 		bdroom: manageBedrooms,
 		bthroom: manageBathrooms,
 		extras: manageExtras,
-		price: getPrice
+		getprice: getPrice,
 	}
 })();
+
 
 function addToPrice(el){
 	var el_id = $(el).attr('id'),
@@ -46,16 +60,14 @@ function addToPrice(el){
 		PriceManipulator.bdroom(num);
 	} else if (el_id === 'id_bathroomNumber'){
 		PriceManipulator.bthroom(num);
-	} else {
-
 	}
-	$('#id_cost').val(PriceManipulator.price());
+	$('#id_cost').val(PriceManipulator.getprice());
 	
 }
 
 function addToPriceExtras(el){
 	PriceManipulator.extras(el);
-	$('#id_cost').val(PriceManipulator.price());
+	$('#id_cost').val(PriceManipulator.getprice());
 }
 
 function validateEmail($email) {
@@ -74,8 +86,10 @@ function verifyEmail(el){
 		$("#email_label").remove();
 	}
 }
-https://api.jquery.com/remove/
+
+
 $(function(){
 	$('#id_bathroomNumber option[selected=""]').attr('disabled','disabled');
 	$('#id_bedroomNumber option[selected=""]').attr('disabled','disabled');
+	
 });
