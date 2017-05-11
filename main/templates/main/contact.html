@@ -37,7 +37,7 @@
 									{% endfor %}
 									<h3>{{ form.email.help_text|first }}</h3>
 									<p class="text-muted">{{ form.email.help_text|last }}</p>
-									{% with ph=form.email.name|capfirst %}
+									{% with ph=form.email.label %}
 										{% render_field form.email class="form-control" placeholder=ph %}
 									{% endwith %}
 								</div>

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-11 11:42+0400\n"
+"POT-Creation-Date: 2017-05-11 15:50+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -94,7 +94,7 @@ msgstr "Ձեր անուն/ազգանունը"
 msgid "Your mobile"
 msgstr "Բջջային հեռ․"
 
-#: main/forms.py:70
+#: main/forms.py:70 main/forms.py:114
 msgid "Your email"
 msgstr "Ձեր էլ․ հասցեն"
 
@@ -203,15 +203,15 @@ msgstr "Լրացուցիչ"
 msgid "When do you want us to come?"
 msgstr "Ե՞րբ Այցելենք Ձեզ"
 
-#: main/templates/main/book.html:149
+#: main/templates/main/book.html:151
 msgid "You will pay:"
 msgstr "Դուք կվճարեք՝"
 
-#: main/templates/main/book.html:149
+#: main/templates/main/book.html:151
 msgid "AMD"
 msgstr "Դրամ"
 
-#: main/templates/main/book.html:152 main/templates/main/index.html:18
+#: main/templates/main/book.html:154 main/templates/main/index.html:18
 msgid "Book Now"
 msgstr "Պատվիրել Հիմա"
 
@@ -286,8 +286,9 @@ msgid ""
 "rated and reviewed after each task. Only 5 star Cleaners are kept."
 msgstr ""
 "Մեր հմուտ մասնագետները ներդնում են առավելագույն հնարավոր ջանքը բոլոր "
-"պատվերները կատարելիս։ Մաքրարարները գնահատվում են յուրաքանչյուր աշխատանից հետո, "
-"մնում է միայն հաճախորդների կողմից միջինը 4․5 աստղից բարձր ստացած անձնակազմը"
+"պատվերները կատարելիս։ Մաքրարարները գնահատվում են յուրաքանչյուր աշխատանից "
+"հետո, մնում է միայն հաճախորդների կողմից միջինը 4․5 աստղից բարձր ստացած "
+"անձնակազմը"
 
 #: main/templates/main/index.html:100
 msgid "Easy To Get Help"
@@ -320,8 +321,8 @@ msgid ""
 "You get a fixed quote when you book. That is what you pay - no hidden fees "
 "or other unexpected charges."
 msgstr ""
-"Պատվերի մանրամասները լրացնելիս կտեսնեք վերջնական գումարը, որ ենթակա է վճարման։ "
-"Ոչ մի այլ անսպասելի հավելավճարներ։"
+"Պատվերի մանրամասները լրացնելիս կտեսնեք վերջնական գումարը, որ ենթակա է "
+"վճարման։ Ոչ մի այլ անսպասելի հավելավճարներ։"
 
 #: main/templates/main/index.html:130
 msgid "You can book from your IOS or Android mobile phone"

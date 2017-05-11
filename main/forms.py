@@ -110,6 +110,10 @@ class ContactForm(forms.ModelForm):
 				_('We need this so we can reply to you. Please make sure that it\'s right.')
 			]
 		}
+		
+		labels = {
+			'email': _('Your email')
+		}
 
 	def clean_contactReason(self):
 		data = self.cleaned_data['contactReason']
