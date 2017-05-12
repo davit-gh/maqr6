@@ -25,7 +25,7 @@ SECRET_KEY = '!0nd0bm+z_w@orgn4^l1pb9)7ekj=d^az$n1%l@_ffym=^+@(7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['davest.pythonanywhere.com', 'localhost']
+ALLOWED_HOSTS = ['davest.pythonanywhere.com', 'localhost', 'shrouded-scrubland-80947.herokuapp.com']
 
 
 # Application definition
