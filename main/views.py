@@ -8,7 +8,7 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-	reviews = Review.objects.all()
+	reviews = Review.objects.filter(id__lte=14).filter(id__gte=12)
 	context = {
 		'reviews': reviews,
 		'pageHeader': {

@@ -84,7 +84,7 @@ class ContactForm(forms.ModelForm):
 
 		CONTACTCHOICES = [
 			(0, _("I have a question before I book")),
-			(1, _("I have a question about my paypent")),
+			(1, _("I have a question about my payment")),
 			(2, _("I would like to change my booking")),
 			(3, _("I am confused about how something works")),
 			(4, _("I have a customer service comment")),

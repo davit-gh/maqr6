@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-11 15:50+0400\n"
+"POT-Creation-Date: 2017-05-12 10:53+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -94,7 +94,7 @@ msgstr "Ձեր անուն/ազգանունը"
 msgid "Your mobile"
 msgstr "Բջջային հեռ․"
 
-#: main/forms.py:70 main/forms.py:114
+#: main/forms.py:70 main/forms.py:115
 msgid "Your email"
 msgstr "Ձեր էլ․ հասցեն"
 
@@ -115,7 +115,7 @@ msgid "I have a question before I book"
 msgstr "Ես հարց ունեմ պատվիրելուց առաջ"
 
 #: main/forms.py:87
-msgid "I have a question about my paypent"
+msgid "I have a question about my payment"
 msgstr "Ես հարց ունեմ վճարման վերաբերյալ"
 
 #: main/forms.py:88
