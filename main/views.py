@@ -54,7 +54,7 @@ def contact(request):
 				_('There are exactly 4 ways you can reach us.')
 			)
 	contact_methods = {
-		'method1': _('Get fast answers on Facebook: <a href="https://facebook.com">Maqr6</a>'),
+		'method1': _('Get fast answers on Facebook: <a href="https://www.facebook.com/Maqr6-780901448754227/">Maqr6</a>'),
 		'method2': _('Email us directly at: support@maqr6.am'),
 		'method3': _('TEXT us on mobile at: 094 43-34-16')
 	}

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-12 10:53+0400\n"
+"POT-Creation-Date: 2017-05-12 14:11+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -378,9 +378,11 @@ msgstr "Մեզ հետ կապվելու ուղիղ 4 եղանակ կա։"
 
 #: main/views.py:57
 msgid ""
-"Get fast answers on Facebook: <a href=\"https://facebook.com\">Maqr6</a>"
+"Get fast answers on Facebook: <a href=\"https://www.facebook.com/"
+"Maqr6-780901448754227/\">Maqr6</a>"
 msgstr ""
-"Ստացեք արագ պատասխաններ ՖԲ-ով՝ <a href=\"https://facebook.com\">Մաքր6</a>"
+"Ստացեք արագ պատասխաններ ՖԲ-ով՝ <a href=\"https://www.facebook.com/"
+"Maqr6-780901448754227/\">Մաքր6</a>"
 
 #: main/views.py:58
 msgid "Email us directly at: support@maqr6.am"
