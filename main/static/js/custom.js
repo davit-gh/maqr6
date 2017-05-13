@@ -1,11 +1,11 @@
 var PriceManipulator = (function(){
-	const PPBD = 1000, PPBTH = 1500;
+	const PPBD = 3000, PPBTH = 3000;
 	const EXTRAS = {
 			'oven': 2000,
-			'fridge': 5000,
-			'basement': 9000
+			'fridge': 4000,
+			'basement': 8000
 		};
-	var price;
+	var price, initial = 13000;
 	var bd = $('#id_bedroomNumber').val(), bth = $('#id_bathroomNumber').val(),
 		ext = $('#id_extras');	
 	var lastBdPrice = bd ? bd*PPBD : 0, lastBthPrice = bth ? bth*PPBTH : 0;
@@ -20,12 +20,12 @@ var PriceManipulator = (function(){
 	var lastExtra = iterExtras();
 	var manageBedrooms = function(bdrNum){
 		lastBdPrice = bdrNum * PPBD;
-		price = lastBdPrice + lastBthPrice + lastExtra;	
+		price = initial + lastBdPrice + lastBthPrice + lastExtra;	
 	}
 
 	var manageBathrooms = function(bthrNum){
 		lastBthPrice = bthrNum * PPBTH;
-		price = lastBdPrice + lastBthPrice + lastExtra;
+		price = initial + lastBdPrice + lastBthPrice + lastExtra;
 	}
 
 	var manageExtras = function(extra){		
@@ -37,7 +37,7 @@ var PriceManipulator = (function(){
 			lastExtra -= EXTRAS[val];
 		}
 		
-		price = lastBdPrice + lastBthPrice + lastExtra;
+		price = initial + lastBdPrice + lastBthPrice + lastExtra;
 	}
 
 	var getPrice = function(){

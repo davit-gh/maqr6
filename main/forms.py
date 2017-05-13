@@ -32,17 +32,19 @@ class OrderForm(forms.ModelForm):
 						input_formats=['%d/%m/%Y %H:%M'],
 						help_text=_('Please set the date and the time of your cleaning.')
 					)
+	cost 		  = forms.CharField(initial='13000')
 	class Meta:
-		def make_array(item, num, initial_text):
-			i = 1
-			lst = [('', initial_text)]
-			while i <= num:
-				lst += [(i, '%s %s'%(i, item))]
+		def make_array(item, num, initial_text=''):
+			i = 0
+			#lst = [('', initial_text)]
+			lst = []
+			while i < num:
+				lst += [(i, '%s %s'%(i+1, item))]
 				i += 1
 			return lst
 		
-		BEDROOM_CHOICES = make_array(_('Bedroom'), 6, _("How many bedrooms?"))
-		BATHROOM_CHOICES = make_array(_('Bathroom'), 6, _("How many bathrooms?"))
+		BEDROOM_CHOICES = make_array(_('Bedroom'), 6)
+		BATHROOM_CHOICES = make_array(_('Bathroom'), 6)
 		EXTRA_CHOICES = [
 			('fridge', _('Inside Fridge')),
 			('oven', _('Inside Oven')),
