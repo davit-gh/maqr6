@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-12 14:11+0400\n"
+"POT-Creation-Date: 2017-05-14 10:48+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,111 +42,103 @@ msgstr "Ամսաթիվ և ժամ"
 msgid "Please set the date and the time of your cleaning."
 msgstr "Խնդրում ենք նշել մաքրման ամսաթիվն ու ժամը"
 
-#: main/forms.py:44
+#: main/forms.py:46
 msgid "Bedroom"
 msgstr "Սենյակ"
 
-#: main/forms.py:44
-msgid "How many bedrooms?"
-msgstr "Քանի՞ սենյակ"
-
-#: main/forms.py:45
+#: main/forms.py:47
 msgid "Bathroom"
 msgstr "Բաղնիք/Զուգարան"
 
-#: main/forms.py:45
-msgid "How many bathrooms?"
-msgstr "Քանի՞ բաղնիք/զուգարան"
-
-#: main/forms.py:47
+#: main/forms.py:49
 msgid "Inside Fridge"
 msgstr "Սառնարանի ներսը"
 
-#: main/forms.py:48
+#: main/forms.py:50
 msgid "Inside Oven"
 msgstr "էլ․ վառարանի ներսը"
 
-#: main/forms.py:49
+#: main/forms.py:51
 msgid "Basement"
 msgstr "Նկուղ"
 
-#: main/forms.py:52
+#: main/forms.py:54
 msgid "1 time"
 msgstr "1 անգամ"
 
-#: main/forms.py:53
+#: main/forms.py:55
 msgid "Every Week"
 msgstr "Ամեն շաբաթ"
 
-#: main/forms.py:54
+#: main/forms.py:56
 msgid "Every 2 weeks"
 msgstr "Ամեն 2 շաբաթը մեկ"
 
-#: main/forms.py:55
+#: main/forms.py:57
 msgid "Every 4 weeks"
 msgstr "Ամեն 4 շաբաթը մեկ"
 
-#: main/forms.py:68
+#: main/forms.py:70
 msgid "Your full name"
 msgstr "Ձեր անուն/ազգանունը"
 
-#: main/forms.py:69
+#: main/forms.py:71
 msgid "Your mobile"
 msgstr "Բջջային հեռ․"
 
-#: main/forms.py:70 main/forms.py:115
+#: main/forms.py:72 main/forms.py:117
 msgid "Your email"
 msgstr "Ձեր էլ․ հասցեն"
 
-#: main/forms.py:71
+#: main/forms.py:73
 msgid "Address"
 msgstr "Հասցե"
 
-#: main/forms.py:74
+#: main/forms.py:76
 msgid "The address of the space to be cleaned."
 msgstr "Հասցեն, որտեղ պետք է կատարվի պատվերը։"
 
-#: main/forms.py:75
+#: main/forms.py:77
 msgid "We provide service only in Yerevan at this time."
 msgstr "Առայժմ ծառայությունը գործում է միայն Երևանում։"
 
-#: main/forms.py:86
+#: main/forms.py:88
 msgid "I have a question before I book"
 msgstr "Ես հարց ունեմ պատվիրելուց առաջ"
 
-#: main/forms.py:87
+#: main/forms.py:89
 msgid "I have a question about my payment"
 msgstr "Ես հարց ունեմ վճարման վերաբերյալ"
 
-#: main/forms.py:88
+#: main/forms.py:90
 msgid "I would like to change my booking"
 msgstr "Ես կուզեի փոփոխել պատվերի տվյալները"
 
-#: main/forms.py:89
+#: main/forms.py:91
 msgid "I am confused about how something works"
 msgstr "Ինձ համար պարզ չէ ինչպես է ինչ-որ բան աշխատում"
 
-#: main/forms.py:90
+#: main/forms.py:92
 msgid "I have a customer service comment"
 msgstr "Ես կարծիք ունեմ հաճախորդների սպասարկման վերաբերյալ"
 
-#: main/forms.py:91
+#: main/forms.py:93
 msgid "Other"
 msgstr "Այլ"
 
-#: main/forms.py:101
+#: main/forms.py:103
 msgid "What do you need help with?"
 msgstr "Ինչպիսի՞ օգնության կարիք ունեք"
 
-#: main/forms.py:102
+#: main/forms.py:104
 msgid "This helps us make sure you get the right answer as fast as possible"
 msgstr "Սա օգնում է մեզ հնարավորինս շուտ գտնել Ձեզ համապատասխան պատասխանը"
 
-#: main/forms.py:105
+#: main/forms.py:107
 msgid "What's your question, comment or issue?"
 msgstr "Ո՞րն է Ձեր հարցը, կարծիքը կամ խնդիրը"
 
-#: main/forms.py:106
+#: main/forms.py:108
 msgid ""
 "Give us as much detail as you can. The more we know, the better we can help "
 "you."
@@ -154,11 +146,11 @@ msgstr ""
 "Խնդրում ենք հնարավորինս մանրամասնել։ Ինչքան մանրամասն այնքան ավելի "
 "արդյունավետ կարող ենք օգնել"
 
-#: main/forms.py:109
+#: main/forms.py:111
 msgid "What's your email address?"
 msgstr "Ո՞րն է Ձեր էլ․ հասցեն"
 
-#: main/forms.py:110
+#: main/forms.py:112
 msgid "We need this so we can reply to you. Please make sure that it's right."
 msgstr "ՄԵզ սա պետք է, որ պատասխանենք։ Խնդրում ենք համոզվել, որ ճիշտ է գրված"
 
@@ -325,12 +317,8 @@ msgstr ""
 "վճարման։ Ոչ մի այլ անսպասելի հավելավճարներ։"
 
 #: main/templates/main/index.html:130
-msgid "You can book from your IOS or Android mobile phone"
-msgstr "Կարող եք պատվրել նաև Ձեր IOS և Android հեռախոսներով"
-
-#: main/templates/main/index.html:131
-msgid "as easily as from PC or Mac"
-msgstr "այնքան հեշտ որքան համակարգչով"
+msgid "Also available for mobile"
+msgstr "Հասանելի է նաև բջջայինով"
 
 #: main/templates/main/index.html:141
 msgid "Book a house cleaning in 60 seconds!"
@@ -395,6 +383,18 @@ msgstr "Կարճ հաղորդագրություն ուղարկեք մեզ՝ 094 
 #: main/views.py:66
 msgid "We received your message, we'll get back to you very soon. Thank you!"
 msgstr "Մենք ստացանք Ձեր նամակը, կպատասխանենք շատ շուտով։ Շնորհակալությու՛ն։"
+
+#~ msgid "How many bedrooms?"
+#~ msgstr "Քանի՞ սենյակ"
+
+#~ msgid "How many bathrooms?"
+#~ msgstr "Քանի՞ բաղնիք/զուգարան"
+
+#~ msgid "You can book from your IOS or Android mobile phone"
+#~ msgstr "Կարող եք պատվրել նաև Ձեր IOS և Android հեռախոսներով"
+
+#~ msgid "as easily as from PC or Mac"
+#~ msgstr "այնքան հեշտ որքան համակարգչով"
 
 #, fuzzy
 #~| msgid "You get a fixed quote when you book. That\\"
